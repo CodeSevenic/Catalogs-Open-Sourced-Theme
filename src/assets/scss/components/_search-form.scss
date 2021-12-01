@@ -1,0 +1,25 @@
+.c-search-form {
+  position: relative;
+  padding-right: 44px;
+  width: 100%;
+  max-width: 500px;
+  &__label {
+    margin-bottom: 0;
+  }
+  &__button {
+    position: absolute;
+    right: 0;
+    top: -1.5px;
+    height: 105%;
+    width: 110px;
+    border-radius: 0px 10px 10px 10px;
+
+    i {
+      font-size: 1.1rem;
+    }
+
+    .button_search {
+      margin-left: 8px;
+    }
+  }
+}

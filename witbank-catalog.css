@@ -1,0 +1,112 @@
+input[type='search'] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  border-radius: 10px;
+}
+
+/* Single Store CSS */
+
+.store_banner {
+  overflow: hidden;
+}
+
+.store-wrapper {
+  position: relative;
+}
+
+.store-catalogs {
+  margin: 0 auto;
+  overflow-x: clip;
+  width: 100%;
+  padding: 0px 15px 30px 15px;
+}
+
+.store-catalogs ul {
+  position: relative;
+}
+
+/* Self Created NavBar */
+ul#menu-all-pages {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+}
+ul#menu-all-pages > li {
+  position: relative;
+  min-width: fit-content;
+  color: #ffffff;
+}
+
+ul#menu-all-pages > li a {
+  color: #c2c2c2;
+}
+
+ul#menu-all-pages > li ul li a {
+  color: #000000;
+}
+
+ul#menu-all-pages > li:not(:first-child) {
+  padding-left: 20px;
+}
+
+ul#menu-all-pages li.menu-item-has-children:hover::after {
+  content: '';
+  position: absolute;
+  border-top: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #118cff;
+  border-left: 10px solid transparent;
+  z-index: 9999;
+  top: 17px;
+  left: 15px;
+}
+
+ul#menu-all-pages li .sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  list-style: none;
+  z-index: 999;
+  border-top: 3px solid #118cff;
+  border-bottom: 3px solid #118cff;
+  background-color: #ffffff;
+  width: 100px;
+}
+ul#menu-all-pages li:last-child .sub-menu {
+  left: -170px !important;
+}
+ul#menu-all-pages li:hover .sub-menu {
+  padding: 15px 0 30px 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 150px;
+  margin: 0;
+  margin-top: 10px;
+  min-width: 300px;
+  left: -50px;
+  max-width: 250px;
+  z-index: 9999;
+}
+
+ul#menu-all-pages li .sub-menu::after {
+  position: absolute;
+  min-width: 150px;
+  min-height: 100px;
+  right: 0;
+  bottom: 0;
+  content: '';
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(./images/sprite-category1.png);
+}
+
+#menu-all-pages .menu-button {
+  background-color: transparent;
+  padding: 0 0 0 5px;
+  margin: 0;
+}

@@ -1,0 +1,358 @@
+/*! CSS Used from: Embedded */
+article,
+header,
+section {
+  display: block;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+img {
+  border: 0;
+}
+button {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button {
+  text-transform: none;
+}
+button {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* Custom Search CSS Styles */
+.custom_search {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 60px;
+  transition: 0.5s;
+  /* box-shadow: 0 0 0 5px #2a93dc; */
+  overflow: hidden;
+}
+
+.custom_search.active {
+  width: 360px;
+}
+
+.custom_search .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  cursor: pointer;
+}
+
+.custom_search .icon::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #6f7880;
+  border-radius: 50%;
+  transform: translate(-4px, -4px);
+}
+
+.custom_search .icon::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 12px;
+  background-color: #2a93dc;
+  transform: translate(6px, 6px) rotate(315deg);
+}
+
+.custom_search .input {
+  position: relative;
+  width: 300px;
+  height: 60px;
+  left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom_search .input input {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  padding: 0 83px 0 0;
+}
+
+.custom_search .clear {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  right: 50px;
+  background-color: #00000042;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+span.clear.shown {
+  display: flex;
+}
+
+.custom_search .clear::before {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 15px;
+  background-color: rgb(255, 255, 255);
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+
+.custom_search .clear::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 15px;
+  background-color: rgb(255, 255, 255);
+  transform: rotate(315deg);
+  transition: 0.3s;
+}
+
+.custom_search .clear:hover::before,
+.custom_search .clear:hover::after {
+  background-color: red;
+}
+
+.custom_search .search-btn {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 30px;
+  width: 30px;
+  background-color: #00000024 !important;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  right: 10px;
+  color: #66606096;
+  background: transparent;
+  outline: none;
+  transition: 0.3s;
+}
+
+.custom_search .search-btn.shown {
+  display: flex;
+}
+
+.custom_search .search-btn:hover {
+  color: #666060;
+}
+
+/* End of Custom Search */
+
+/*! CSS Used from: Embedded */
+.pull-right {
+  float: right !important;
+}
+
+.catalog .catalog-header {
+  width: 100%;
+  height: 40px;
+  padding-bottom: 35px;
+  padding-top: 5px;
+}
+.catalog .catalog-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2b2f35;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  font-family: Comfortaa, cursive;
+  line-height: 1.1;
+}
+.catalog .catalog-title a {
+  color: #2b2f35;
+  font-weight: 700;
+}
+.catalog .catalog-title a:hover {
+  color: #2a93dc;
+}
+.catalog .catalog-date {
+  font-size: 1rem;
+  color: black;
+}
+.catalog .catalog-cover {
+  display: flex;
+  justify-content: center;
+}
+.catalog .catalog-image {
+}
+.catalog-anchor {
+  width: 100%;
+  margin-top: 15px;
+}
+.catalog .catalog-image .catalog-border {
+  margin: 0px 10px 0px 10px;
+  display: flex;
+  background-color: #fff;
+  border-left: 0;
+  position: relative;
+}
+.catalog .catalog-image img {
+  object-fit: contain;
+  height: 350px;
+  width: 100%;
+}
+.catalog .catalog-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  background: -moz-radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  margin-left: -2px;
+  border-radius: 2px;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.catalog .catalog-mask:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.catalog .catalog-mask .button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 3px;
+  text-align: center;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+}
+.button-bold {
+  padding: 10px 10px;
+  width: 130px;
+}
+.button-primary {
+  background-color: #0e76a8;
+}
+.button-primary:hover {
+  background-color: #54a9e2;
+}
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  width: 280px;
+  margin: 20px 10px;
+}
+ul.list {
+  margin: 0;
+}
+ul.list.flex-division {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* margin: 0 -10px; */
+}
+
+.catalog {
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-box-shadow: 0 3px 15px 5px rgba(153, 153, 153, 0.5);
+  box-shadow: 0 3px 15px 5px rgba(153, 153, 153, 0.5);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.catalog-logo {
+  margin: 0 auto;
+}
+
+.catalog-logo img {
+  margin-bottom: 15px;
+  border: 1px solid #0000002b;
+  width: 100%;
+  max-width: 160px;
+  border-radius: 5px;
+  object-fit: contain;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.catalog-logo img:hover {
+  filter: brightness(1.2);
+}
+
+.catalog-website a {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 29px;
+}
