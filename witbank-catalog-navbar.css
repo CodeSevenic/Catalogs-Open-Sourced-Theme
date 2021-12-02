@@ -2,136 +2,6 @@
   position: relative;
 }
 
-#navbar .nav > ul.navbar-nav > li:hover > .dropdown {
-  display: block;
-  border-radius: 50px 50px 0px 0;
-}
-#navbar .nav > ul.navbar-nav > li.has_child:hover > a:before {
-  content: '';
-  position: absolute;
-  border-right: 8px solid transparent;
-  border-left: 8px solid transparent;
-  border-bottom: 8px solid #00a3d1;
-  bottom: -10px;
-  left: 50%;
-  margin-left: -8px;
-  z-index: 40;
-}
-#navbar .nav > ul.navbar-nav > li > a {
-  border-radius: 5px;
-  display: block;
-  color: #9d9c9c;
-  position: relative;
-  font-size: 1.15rem;
-}
-
-#navbar .nav > ul.navbar-nav > li .dropdown {
-  display: none;
-  border: 1px solid #00a3d1;
-  border-top: 3px solid #00a3d1;
-  padding-left: 20px;
-  position: absolute;
-  z-index: 40;
-  top: 57px;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  left: 0px;
-  right: 0px;
-  box-shadow: 0 3px 8px rgba(90, 77, 77, 0.2);
-  overflow: hidden;
-}
-#navbar .nav > ul.navbar-nav > li .dropdown .clearfix {
-  width: 260px;
-  height: 160px;
-  position: absolute;
-  z-index: 0;
-  bottom: 0;
-  right: 0;
-  background-image: url(https://www.latestspecials.co.za/img/sprite-category.png);
-}
-
-#navbar .nav > ul.navbar-nav > li .dropdown ul:not(.suggest-list) li a {
-  font-size: 13px;
-  padding: 4px;
-  display: block;
-  color: #333;
-  text-decoration: none;
-}
-
-#navbar .nav > ul.navbar-nav > li .dropdown .title {
-  display: block;
-  margin-bottom: 12px;
-  padding: 0 4px 4px;
-  font-size: 18px;
-  z-index: 1;
-  position: relative;
-}
-
-#navbar .nav > ul.navbar-nav > li .dropdown {
-  padding: 20px 20px 40px;
-  margin: 0px;
-}
-
-input[type='checkbox'] {
-  margin: 4px 0 0;
-  margin-top: 1px \9;
-  line-height: normal;
-}
-
-label {
-  display: inline-block;
-  max-width: 100%;
-  margin-bottom: 5px;
-  font-weight: 700;
-}
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 18px;
-}
-.switch input {
-  display: none;
-}
-
-.dropdown {
-  position: relative;
-}
-
-ul.list-unstyled {
-  display: flex;
-  list-style: none;
-  justify-content: flex-start;
-  margin: 0;
-  padding-top: 20px;
-  position: relative;
-}
-
-.dropdown > ul.list-unstyled {
-  display: flex;
-  flex-direction: column;
-  justify-content: unset;
-  flex-wrap: wrap;
-  list-style: none;
-  height: 300px;
-  z-index: 999;
-}
-
-nav > .list-unstyled > li.has_child:not(:first-child) {
-  margin-left: 25px;
-}
-
-@media screen and (max-width: 785px) {
-  #navbar {
-    display: none;
-  }
-}
-
-li.has_child {
-  margin-bottom: 0;
-}
-
 /* ===================== */
 /* Mobile view CSS */
 /* ====================== */
@@ -151,13 +21,13 @@ nav.nav-mobile {
 }
 
 nav .menu-wrapper {
-  position: absolute;
-  top: 55px;
+  position: fixed;
+  top: 130px;
   left: 0;
-  /* bottom: 0; */
+  bottom: -1px;
   display: none;
   width: fit-content;
-  overflow: hidden;
+  overflow-y: auto;
   background-color: indigo;
   /* background: #242526; */
   border-radius: 0 40px 40px 0;
@@ -227,6 +97,10 @@ nav .menu-wrapper ul li:hover a {
 
 .menu-wrapper ul .arrow span {
   margin-right: 15px;
+}
+
+.menu-wrapper ul li:last-child {
+  padding: 0 0 200px 0;
 }
 
 /* ==================== */

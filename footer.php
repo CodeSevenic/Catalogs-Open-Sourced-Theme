@@ -21,6 +21,7 @@
 
    const health_list = document.querySelector('.health-list');
    const vehicles_list = document.querySelector('.vehicles-list');
+   const other_list = document.querySelector('.other-list');
    // Category child items
    const groceries_drop = document.querySelector('.groceries-drop');
    const electronics_drop = document.querySelector('.electronics-drop');
@@ -30,6 +31,7 @@
 
    const health_drop = document.querySelector('.health-drop');
    const vehicles_drop = document.querySelector('.vehicles-drop');
+   const other_drop = document.querySelector('.other-drop');
    //  Back Buttons
    const back_groceries_btn = document.querySelector('.back-groceries-btn');
    const back_electronics_btn = document.querySelector('.back-electronics-btn');
@@ -39,6 +41,7 @@
 
    const back_health_btn = document.querySelector('.back-health-btn');
    const back_vehicles_btn = document.querySelector('.back-vehicles-btn');
+   const back_other_btn = document.querySelector('.back-other-btn');
 
    //  ==================================== //
 
@@ -84,6 +87,11 @@
      vehicles_drop.style.display = 'block';
    };
 
+   other_list.onclick = () => {
+     menu_bar.style.display = 'none';
+     other_drop.style.display = 'block';
+   };
+
    //  Back action functions
    back_groceries_btn.onclick = () => {
      groceries_drop.style.display = 'none';
@@ -115,6 +123,11 @@
 
    back_vehicles_btn.onclick = () => {
      vehicles_drop.style.display = 'none';
+     menu_bar.style.display = 'block';
+   };
+
+   back_other_btn.onclick = () => {
+     other_drop.style.display = 'none';
      menu_bar.style.display = 'block';
    };
  </script>
