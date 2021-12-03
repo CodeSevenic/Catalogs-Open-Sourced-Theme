@@ -33,7 +33,6 @@ $catalog_content = get_field('catalog_content', get_the_ID());
         <?php
         if ($catalog_content) { ?>
           <?php foreach ($catalog_content as $catalog_image) {
-
           ?>
             <li class="li-brochu swiper-slide card-size">
               <article class="catalog ga-brochure-catalog">
@@ -51,6 +50,7 @@ $catalog_content = get_field('catalog_content', get_the_ID());
                 <header class="catalog-header">
                   <span class="catalog-date">
                     <?php echo get_field('start_date') ?> - <?php echo get_field('end_date') ?> </span>
+                  <h4 class="catalog-title"><?php echo $catalog_image['catalog_title'] ?></h4>
                 </header>
                 <?php
                 if (get_field('store_logo')) { ?>
