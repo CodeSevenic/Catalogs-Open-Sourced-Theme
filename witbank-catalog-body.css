@@ -221,8 +221,7 @@ span.clear.shown {
   display: flex;
   justify-content: center;
 }
-.catalog .catalog-image {
-}
+
 .catalog-anchor {
   width: 100%;
   margin-top: 15px;
@@ -236,7 +235,7 @@ span.clear.shown {
 }
 .catalog .catalog-image img {
   object-fit: contain;
-  height: 350px;
+  height: 250px;
   width: 100%;
 }
 .catalog .catalog-mask {
@@ -309,7 +308,7 @@ span.clear.shown {
 }
 
 .list-item {
-  width: 280px;
+  width: 200px;
   margin: 20px 10px;
 }
 ul.list {
@@ -328,7 +327,7 @@ ul.list.flex-division {
   text-align: center;
   -webkit-box-shadow: 0 3px 15px 5px rgba(153, 153, 153, 0.5);
   box-shadow: 0 3px 15px 5px rgba(153, 153, 153, 0.5);
-  max-width: 300px;
+  max-width: 230px;
   margin: 0 auto;
 }
 

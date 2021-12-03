@@ -80,6 +80,10 @@ nav .menu-wrapper ul li:hover a {
   border-radius: 50%;
 }
 
+.menu-wrapper ul li a .icon svg {
+  width: 20px;
+}
+
 .menu-wrapper ul li a i {
   position: absolute;
   right: 15px;
