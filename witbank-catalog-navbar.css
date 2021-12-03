@@ -126,6 +126,7 @@ div#navbar {
   align-items: center;
   cursor: pointer;
   overflow: hidden;
+  margin-bottom: 7px;
 }
 
 .drop-btn .toggle span {

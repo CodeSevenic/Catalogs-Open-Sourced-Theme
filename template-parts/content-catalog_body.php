@@ -30,7 +30,9 @@ $post_query = new WP_Query($args);
           <header class="catalog-header">
             <span class="catalog-date">
               <?php echo get_field('start_date') ?> - <?php echo get_field('end_date') ?> </span>
-
+            <?php if (get_field('cover_title')) { ?>
+              <h4 class="catalog-title"><?php echo get_field('cover_title') ?></h4>
+            <?php } ?>
           </header>
           <?php
           if (get_field('store_logo')) { ?>
