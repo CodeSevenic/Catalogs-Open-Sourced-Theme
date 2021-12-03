@@ -108,3 +108,51 @@ nav .menu-wrapper ul li:hover a {
 div#navbar {
   padding-bottom: 15px;
 }
+/* ====== Menu Toggle Icon =======*/
+
+.drop-btn .toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.drop-btn .toggle span {
+  position: absolute;
+  width: 25px;
+  height: 5px;
+  background: #000000;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.drop-btn .toggle span:nth-child(1) {
+  transform: translateY(-10px);
+  width: 25px;
+}
+
+.drop-btn .toggle.active span:nth-child(1) {
+  width: 25px;
+  transform: translateY(0px) rotate(45deg);
+  transition-delay: 0s;
+}
+
+.drop-btn .toggle span:nth-child(2) {
+  transform: translateY(10px);
+  width: 15px;
+}
+.drop-btn .toggle.active span:nth-child(2) {
+  width: 25px;
+  transform: translateY(0px) rotate(315deg);
+  transition-delay: 0.1s;
+}
+.drop-btn .toggle.active span:nth-child(3) {
+  transform: translateX(60px);
+}

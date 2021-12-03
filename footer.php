@@ -8,7 +8,9 @@
  <!-- Swiper JS -->
  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
  <script>
-   const drop_btn = document.querySelector('.menu-ham');
+   const menuToggle = document.querySelector('.toggle');
+
+   const drop_btn = document.querySelector('.toggle');
    const menu_wrapper = document.querySelector('.menu-wrapper');
    const menu_bar = document.querySelector('.menu-bar');
 
@@ -45,8 +47,9 @@
 
    //  ==================================== //
 
-   const toggleWrapper = drop_btn.onclick = () => {
+   drop_btn.onclick = () => {
      menu_wrapper.classList.toggle('show');
+     drop_btn.classList.toggle('active')
    };
 
    document.addEventListener('click', function(event) {
@@ -54,6 +57,7 @@
      const isClickInsideElement2 = drop_btn.contains(event.target)
      if (!isClickInsideElement && !isClickInsideElement2) {
        menu_wrapper.classList.remove('show')
+       drop_btn.classList.remove('active')
      }
    });
    // Main Categories action functions
