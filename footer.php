@@ -45,7 +45,17 @@
    const back_vehicles_btn = document.querySelector('.back-vehicles-btn');
    const back_other_btn = document.querySelector('.back-other-btn');
 
-   //  ==================================== //
+   //  ============ Categories Dropdown =============== //
+   function show(anything) {
+     document.querySelector('.textBox').value = anything;
+   }
+
+   let cat_dropdown = document.querySelector('.cat-dropdown');
+   cat_dropdown.onclick = function() {
+     cat_dropdown.classList.toggle('active');
+   };
+
+   //  ======== End of Categories Dropdown========= //
 
    drop_btn.onclick = () => {
      menu_wrapper.classList.toggle('show');
@@ -53,12 +63,15 @@
    };
 
    document.addEventListener('click', function(event) {
-     const isClickInsideElement = menu_wrapper.contains(event.target);
-     const isClickInsideElement2 = drop_btn.contains(event.target)
-     if (!isClickInsideElement && !isClickInsideElement2) {
+     const menuWrapper = menu_wrapper.contains(event.target);
+     const menuToggle = drop_btn.contains(event.target)
+     const catToggle = cat_dropdown.contains(event.target)
+     if (!menuWrapper && !menuToggle) {
        menu_wrapper.classList.remove('show')
        drop_btn.classList.remove('active')
+
      }
+     if (!catToggle) cat_dropdown.classList.remove('active')
    });
    // Main Categories action functions
    groceries_list.onclick = () => {
