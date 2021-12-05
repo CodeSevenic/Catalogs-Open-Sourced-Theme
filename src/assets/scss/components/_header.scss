@@ -128,11 +128,7 @@
   }
 }
 .c-header {
-  background: linear-gradient(
-    360deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background-color: #222222;
   padding: rem-calc(15) 0 0 0;
   color: #ffffff;
   &__logo {
