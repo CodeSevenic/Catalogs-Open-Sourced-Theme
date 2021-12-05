@@ -33,8 +33,7 @@ nav .menu-wrapper {
   display: none;
   width: fit-content;
   overflow-y: auto;
-  background-color: indigo;
-  /* background: #242526; */
+  background-color: #ffffff;
   border-radius: 0 40px 40px 0;
   z-index: 999;
 }
@@ -60,7 +59,7 @@ nav .menu-wrapper ul li {
 nav .menu-wrapper ul li a {
   position: relative;
   text-decoration: none;
-  color: #b0b3b8;
+  color: #48494a;
   display: flex;
   font-size: 18px;
   padding: 0 10px;
@@ -77,7 +76,7 @@ nav .menu-wrapper ul li:hover a {
   height: 40px;
   width: 40px;
   margin-right: 13px;
-  background: #ffffff1a;
+  /* background: #ffffff1a; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,7 +88,7 @@ nav .menu-wrapper ul li:hover a {
   width: 20px;
 }
 
-.menu-wrapper ul li a i {
+.menu-wrapper ul li a svg {
   position: absolute;
   right: 15px;
   font-size: 25px;
@@ -110,6 +109,21 @@ nav .menu-wrapper ul li:hover a {
 
 .menu-wrapper ul li:last-child {
   padding: 0 0 200px 0;
+}
+
+@media only screen and (max-width: 480px) {
+  nav .menu-wrapper {
+    min-width: 279px;
+    max-width: 280px;
+  }
+  nav .menu-wrapper ul li a .icon {
+    height: 25px;
+    width: 25px;
+  }
+
+  nav .menu-wrapper ul li a {
+    font-size: 16px;
+  }
 }
 
 /* ==================== */

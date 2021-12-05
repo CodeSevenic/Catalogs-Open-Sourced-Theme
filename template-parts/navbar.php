@@ -57,73 +57,87 @@
         </li>
         <li class="groceries-list">
           <a href="#">
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <div class="icon"><svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
                 <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
               </svg>
             </div>
-            Groceries <i class="fas fa-angle-right"></i>
+            Groceries <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+              <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+            </svg>
           </a>
         </li>
         <li class="electronics-list">
           <a href="#">
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <div class="icon"><svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
                 <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
               </svg>
             </div>
-            Electronics <i class="fa fa-angle-right"></i>
+            Electronics <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+              <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+            </svg>
           </a>
         </li>
 
         <li class="home-list">
           <a href="#">
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <div class="icon"><svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
                 <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
               </svg>
             </div>
-            Home & Garden
+            Home & Garden <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+              <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+            </svg>
           </a>
         </li>
         <li class="clothing-list">
           <a href="#">
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <div class="icon"><svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
                 <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
               </svg>
             </div>
-            Clothing
+            Clothing <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+              <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+            </svg>
           </a>
         </li>
         <li class="health-list">
           <a href="#">
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <div class="icon"><svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
                 <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
               </svg>
             </div>
-            Health & Beauty
+            Health & Beauty <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+              <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+            </svg>
           </a>
         </li>
         <li class="vehicles-list">
           <a href="#">
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <div class="icon"><svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
                 <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
               </svg>
             </div>
-            Vehicles
+            Vehicles <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+              <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+            </svg>
           </a>
         </li>
         <li class="other-list">
           <a href="#">
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <div class="icon"><svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
                 <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
               </svg>
             </div>
-            Other
+            Other <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+              <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+            </svg>
           </a>
         </li>
       </ul>
