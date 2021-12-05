@@ -57,24 +57,24 @@
         </li>
         <li class="groceries-list">
           <a href="#">
-            <div class="icon"><svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
                 <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
               </svg>
             </div>
-            Groceries <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+            Groceries <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
               <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
             </svg>
           </a>
         </li>
         <li class="electronics-list">
           <a href="#">
-            <div class="icon"><svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
                 <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
               </svg>
             </div>
-            Electronics <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+            Electronics <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
               <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
             </svg>
           </a>
@@ -82,60 +82,60 @@
 
         <li class="home-list">
           <a href="#">
-            <div class="icon"><svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
                 <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
               </svg>
             </div>
-            Home & Garden <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+            Home & Garden <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
               <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
             </svg>
           </a>
         </li>
         <li class="clothing-list">
           <a href="#">
-            <div class="icon"><svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
                 <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
               </svg>
             </div>
-            Clothing <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+            Clothing <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
               <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
             </svg>
           </a>
         </li>
         <li class="health-list">
           <a href="#">
-            <div class="icon"><svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
                 <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
               </svg>
             </div>
-            Health & Beauty <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+            Health & Beauty <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
               <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
             </svg>
           </a>
         </li>
         <li class="vehicles-list">
           <a href="#">
-            <div class="icon"><svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
                 <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
               </svg>
             </div>
-            Vehicles <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+            Vehicles <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
               <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
             </svg>
           </a>
         </li>
         <li class="other-list">
           <a href="#">
-            <div class="icon"><svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
                 <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
               </svg>
             </div>
-            Other <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+            Other <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
               <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
             </svg>
           </a>
@@ -144,7 +144,9 @@
       <!-- Groceries list -->
       <ul class="groceries-drop children-drops">
         <li class="arrow back-groceries-btn">
-          <span class="fas fa-arrow-left"></span>Back
+          <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
+          </svg>Back
         </li>
         <li><a href="/bluff-meat-supply/">Bluff Meat Supply</a></li>
         <li><a href="/boxer/">Boxer</a></li>
@@ -170,7 +172,9 @@
       <!-- Electronics list -->
       <ul class="electronics-drop children-drops">
         <li class="arrow back-electronics-btn">
-          <span class="fas fa-arrow-left"></span>Back
+          <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
+          </svg>Back
         </li>
         <li><a href="/bt-games/">BT Games</a></li>
         <li><a href="/cash-crusaders/">Cash Crusaders</a></li>
@@ -186,7 +190,9 @@
       <!-- Home & Garden list -->
       <ul class="home-drop children-drops">
         <li class="arrow back-home-btn">
-          <span class="fas fa-arrow-left"></span>Back
+          <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
+          </svg>Back
         </li>
         <li><a href="/agrimark/">Agrimark</a></li>
         <li><a href="/bradlows/">Bradlows</a></li>
@@ -214,7 +220,9 @@
       <!-- clothing list -->
       <ul class="clothing-drop children-drops">
         <li class="arrow back-clothing-btn">
-          <span class="fas fa-arrow-left"></span>Back
+          <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
+          </svg>Back
         </li>
         <li><a href="/ackermans/">Ackermans</a></li>
         <li><a href="/cape-union-mart/">Cape Union Mart</a></li>
@@ -232,7 +240,9 @@
       <!-- Health & Beauty list -->
       <ul class="health-drop children-drops">
         <li class="arrow back-health-btn">
-          <span class="fas fa-arrow-left"></span>Back
+          <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
+          </svg>Back
         </li>
         <li><a href="/avon/">Avon</a></li>
         <li><a href="/clicks/">Clicks</a></li>
@@ -242,14 +252,18 @@
       <!-- Vehicles list -->
       <ul class="vehicles-drop children-drops">
         <li class="arrow back-vehicles-btn">
-          <span class="fas fa-arrow-left"></span>Back
+          <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
+          </svg></span>Back
         </li>
         <li><a href="#">Car Magazines</a></li>
       </ul>
       <!-- Other list -->
       <ul class="other-drop children-drops">
         <li class="arrow back-other-btn">
-          <span class="fas fa-arrow-left"></span>Back
+          <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
+          </svg>Back
         </li>
         <li><a href="/aliexpress/">AliExpress</a></li>
         <li><a href="/autozone/">AutoZone</a></li>
@@ -265,7 +279,9 @@
       <!-- Settings and Privacy Menu-items -->
       <ul class="settings-drop children-drops">
         <li class="arrow back-setting-btn">
-          <span class="fas fa-arrow-left"></span>Settings & Privacy
+          <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
+          </svg>Settings & Privacy
         </li>
         <li>
           <a href="#">
@@ -304,7 +320,9 @@
       <!-- Help and Support Menu-items -->
       <ul class="help-drop children-drops">
         <li class="arrow back-help-btn">
-          <span class="fas fa-arrow-left"></span>Help & Support
+          <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
+          </svg>Help & Support
         </li>
         <li>
           <a href="#">

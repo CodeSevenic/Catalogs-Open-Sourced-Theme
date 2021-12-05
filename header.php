@@ -14,6 +14,7 @@
   <a class="u-skip-link" href="#content"><?php esc_attr_e('Skip to content', 'catalogs'); ?></a>
   <!-- Header Start Here -->
   <header onresize="resizeDiv()" role="banner" class="main-header">
+    <?php echo get_template_part('template-parts/content-brand_slider') ?>
     <div class="c-header">
       <div class="o-container u-flex u-align-justify u-align-middle">
         <div class="c-header__logo">

@@ -46,14 +46,21 @@
    const back_other_btn = document.querySelector('.back-other-btn');
 
    //  ============ Categories Dropdown =============== //
-   function show(anything) {
-     document.querySelector('.textBox').value = anything;
+   const textBox = document.querySelector('.textBox')
+   if (textBox) {
+
+     function show(anything) {
+       textBox.value = anything;
+     }
    }
 
    let cat_dropdown = document.querySelector('.cat-dropdown');
-   cat_dropdown.onclick = function() {
-     cat_dropdown.classList.toggle('active');
-   };
+   if (cat_dropdown) {
+
+     cat_dropdown.onclick = function() {
+       cat_dropdown.classList.toggle('active');
+     };
+   }
 
    //  ======== End of Categories Dropdown========= //
 
@@ -65,13 +72,15 @@
    document.addEventListener('click', function(event) {
      const menuWrapper = menu_wrapper.contains(event.target);
      const menuToggle = drop_btn.contains(event.target)
-     const catToggle = cat_dropdown.contains(event.target)
      if (!menuWrapper && !menuToggle) {
        menu_wrapper.classList.remove('show')
        drop_btn.classList.remove('active')
 
      }
-     if (!catToggle) cat_dropdown.classList.remove('active')
+     if (cat_dropdown) {
+       const catToggle = cat_dropdown.contains(event.target)
+       if (!catToggle) cat_dropdown.classList.remove('active')
+     }
    });
    // Main Categories action functions
    groceries_list.onclick = () => {
