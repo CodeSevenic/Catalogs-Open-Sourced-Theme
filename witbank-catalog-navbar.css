@@ -231,7 +231,7 @@ div#navbar {
 
 .parent-wrapper .cat-dropdown.active::before {
   bottom: 2px;
-  /* transform: rotate(-225deg); */
+  transform: rotate(-225deg);
 }
 
 .parent-wrapper .cat-dropdown input {
