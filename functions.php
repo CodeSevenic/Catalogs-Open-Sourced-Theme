@@ -9,6 +9,8 @@ require_once 'lib/navigation.php';
 require_once 'lib/comment-callback.php';
 require_once 'lib/most-recent-widget.php';
 
+show_admin_bar(false);
+
 function catalogs_handle_delete_post()
 {
   if (isset($_GET['action']) && $_GET['action'] === 'catalogs_delete_post') {
