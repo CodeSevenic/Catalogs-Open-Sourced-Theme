@@ -1,25 +1,26 @@
-import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay, EffectFade } from 'swiper';
 
-Swiper.use([Navigation, Pagination, Autoplay]);
+Swiper.use([Navigation, Pagination, Autoplay, EffectFade]);
 // init Swiper:
 
-const storeBanner = new Swiper('.store_banner', {
+export const storeBanner = new Swiper('.store_banner', {
   loop: true,
+  effect: 'fade',
   slidesPerView: 1,
   roundLengths: true,
   centeredSlides: true,
   // Auto play
   autoplay: {
-    delay: 2000,
+    delay: 3000,
   },
   // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+  // navigation: {
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+  // },
 });
 
-const storeCatalogs = new Swiper('.store-catalogs', {
+export const storeCatalogs = new Swiper('.store-catalogs', {
   slidesPerView: 1,
   spaceBetween: 20,
   pagination: {

@@ -6,6 +6,8 @@
   list-style: none;
   padding: 0;
   z-index: 1;
+  border-right: 1px solid #075985;
+  border-left: 1px solid #075985;
 }
 
 .swiper-wrapper {
@@ -68,10 +70,16 @@
 
 .city_slider-section .city_slider .swiper-container,
 .slider_products .city_slider .swiper-container {
-  width: 100%;
+  width: 85%;
   border-radius: 10px;
 }
 
+@media (min-width: 768px) {
+  .city_slider-section .city_slider .swiper-container,
+  .slider_products .city_slider .swiper-container {
+    width: 90%;
+  }
+}
 .city_slider-section .city_slider .city_slider-logo,
 .slider_products .city_slider .city_slider-logo {
   background-color: #fff;
@@ -81,8 +89,8 @@
   background-position: center;
   height: 30px;
   background-origin: content-box;
-  -webkit-box-shadow: 0 2px 7px 0 rgba(153, 153, 153, 0.5);
-  box-shadow: 0 2px 7px 0 rgba(153, 153, 153, 0.5);
+  -webkit-box-shadow: 0px 2px 4px 2px rgb(153 153 153 / 50%);
+  box-shadow: 0px 2px 4px 2px rgb(153 153 153 / 50%);
 }
 
 .city_slider-section .city_slider .city_slider-logo a,
@@ -97,17 +105,17 @@
   box-shadow: 0 2px 7px 0 rgba(14, 88, 145, 0.5);
 }
 
-.city_slider-section .swiper-button-next {
+.city_slider-section .logo-swiper-button-next {
   cursor: pointer;
   outline-style: none;
-  margin: 0 0px 0 10px;
+  margin: 0 5px 0 10px;
   background: 0 0;
 }
 
-.city_slider-section .swiper-button-prev {
+.city_slider-section .logo-swiper-button-prev {
   cursor: pointer;
   outline-style: none;
-  margin: 0 10px 0 0px;
+  margin: 0 10px 0 5px;
   background: 0 0;
 }
 

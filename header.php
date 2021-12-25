@@ -11,13 +11,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <a class="u-skip-link" href="#content"><?php esc_attr_e('Skip to content', 'catalogs'); ?></a>
+  <a class="u-skip-link hidden" href="#content"><?php esc_attr_e('Skip to content', 'catalogs'); ?></a>
   <!-- Header Start Here -->
-  <header onresize="resizeDiv()" role="banner" class="main-header">
+  <header role="banner" class="main-header">
     <?php echo get_template_part('template-parts/content-brand_slider') ?>
-    <div class="c-header">
-      <div class="o-container u-flex u-align-justify u-align-middle">
-        <div class="c-header__logo">
+    <div class="c-header bg-sky-800">
+      <div class="container mx-auto pt-2 px-1 sm:px-5 flex justify-between">
+        <div class="text-white">
           <?php
           if (has_custom_logo()) {
             the_custom_logo();

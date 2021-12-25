@@ -18,6 +18,8 @@ nav.nav-mobile {
   position: relative;
   margin-top: 10px;
   text-align: right;
+  margin-bottom: 10px;
+  line-height: 0;
 }
 .drop-btn svg {
   width: 30px;
@@ -27,7 +29,7 @@ nav.nav-mobile {
 
 nav .menu-wrapper {
   position: fixed;
-  top: 180px;
+  top: 137px;
   left: -120%;
   bottom: -1px;
   /* display: none; */
@@ -156,14 +158,13 @@ div#navbar {
   width: 30px;
   height: 30px;
   background-color: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 1px 1px 20px -10px #ffffff;
   border-radius: 10px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   overflow: hidden;
-  margin-bottom: 7px;
 }
 
 .drop-btn .toggle span {
@@ -216,7 +217,7 @@ div#navbar {
 .parent-wrapper .cat-dropdown::before {
   content: '';
   position: absolute;
-  right: 20px;
+  right: 0px;
   bottom: 5px;
   z-index: 1000;
   width: 8px;
@@ -245,7 +246,7 @@ div#navbar {
   outline: none;
   font-size: 0.8rem;
   box-shadow: 0 3px 15px -2px rgba(0, 0, 0, 0.3);
-  padding: 12px 15px;
+  padding: 12px 10px;
   border-radius: 10px;
 }
 
@@ -266,6 +267,7 @@ div#navbar {
 }
 
 .parent-wrapper .cat-dropdown .option div {
+  display: flex;
   padding: 8px 10px;
   font-size: 0.8rem;
   cursor: pointer;

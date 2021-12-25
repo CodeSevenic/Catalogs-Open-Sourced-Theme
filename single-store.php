@@ -27,7 +27,8 @@ $catalog_content = get_field('catalog_content', get_the_ID());
     <h3>Latest Specials</h3>
   </div>
   <div class="store-wrapper">
-
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
     <div class="store-catalogs">
       <ul class="swiper-wrapper" style="display: flex; list-style: none; margin: 0;">
         <?php

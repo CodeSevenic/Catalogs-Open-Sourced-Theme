@@ -13,7 +13,10 @@ $post_query = new WP_Query($args);
     <?php
     while ($post_query->have_posts()) {
       $post_query->the_post();
-      $image = get_field('poster_image', get_the_ID())['sizes']['catalog-image'];
+      if (get_field('poster_image', get_the_ID())) {
+        $image = get_field('poster_image', get_the_ID())['sizes']['catalog-image'];
+      }
+
     ?>
       <li class="list-item li-brochu">
         <article class="catalog ga-brochure-catalog">
@@ -21,7 +24,7 @@ $post_query = new WP_Query($args);
             <a class="catalog-anchor" href="<?php the_permalink(); ?>">
               <div class="catalog-image">
                 <div class="catalog-border">
-                  <img src="<?php echo $image ?>" alt="Catalogue Game Johannesburg">
+                  <img src="<?php if ($image) echo $image ?>" alt="Catalogue Game Johannesburg">
                   <div class="catalog-mask"> <span class="button button-bold button-primary">View Catalog</span> </div>
                 </div>
               </div>

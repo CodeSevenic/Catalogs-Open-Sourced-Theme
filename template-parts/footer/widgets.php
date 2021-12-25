@@ -16,10 +16,12 @@ foreach ($columns as $i => $column) {
 
   <div class="c-footer c-footer--<?php echo $footer_bg;   ?>">
     <div class="o-container">
-      <div class="o-row">
+      <div class="flex bg-sky-900 py-10 px-5 flex-wrap md:flex-nowrap">
         <?php
         foreach ($columns as $i => $column) { ?>
-          <div class="o-row__column o-row__column--span-12 o-row__column--span-<?php echo $column ?>@medium">
+
+
+          <div class="px-2 pb-5">
             <?php if (is_active_sidebar('footer-sidebar-' . ($i + 1))) {
               dynamic_sidebar('footer-sidebar-' . ($i + 1));
             } ?>

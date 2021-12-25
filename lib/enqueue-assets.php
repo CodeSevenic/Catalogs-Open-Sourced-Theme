@@ -3,7 +3,9 @@
 function catalogs_assets()
 {
   // Main CSS styles
-  wp_enqueue_style('catalogs-stylesheet', get_template_directory_uri() . '/dist/assets/css/bundle.css', array(), '1.0.0', 'all');
+  // wp_enqueue_style('catalogs-stylesheet', get_template_directory_uri() . '/dist/assets/css/bundle.css', array(), '1.0.0', 'all');
+  // Tailwind CSS
+  wp_enqueue_style('catalogs-tailwind-stylesheet', get_template_directory_uri() . '/dist/assets/css/output.css', array(), '1.0.0', 'all');
   // Witbank Catalog CSS styles
   wp_enqueue_style('witbank-catalog-stylesheet', get_template_directory_uri() . '/witbank-catalog.css', array(), '1.0.0', 'all');
   // Brand Swiper CSS styles

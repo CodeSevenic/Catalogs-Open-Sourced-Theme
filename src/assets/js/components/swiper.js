@@ -2,7 +2,7 @@ import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 
 Swiper.use([Navigation, Pagination, Autoplay]);
 // init Swiper:
-const swiper = new Swiper('.swiper-container', {
+export const logoSlider = new Swiper('.swiper-container', {
   loop: true,
   roundLengths: true,
   centeredSlides: true,
@@ -35,7 +35,7 @@ const swiper = new Swiper('.swiper-container', {
   },
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.logo-swiper-button-next',
+    prevEl: '.logo-swiper-button-prev',
   },
 });

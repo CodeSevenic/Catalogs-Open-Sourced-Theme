@@ -1,4 +1,4 @@
-<div class="o-container parent-wrapper">
+<div class="container mx-auto px-1 sm:px-5 flex justify-between parent-wrapper">
   <?php if (is_front_page()) { ?>
     <div class="cat-dropdown">
       <input type="text" class="textBox" placeholder="Catagories" readonly />
