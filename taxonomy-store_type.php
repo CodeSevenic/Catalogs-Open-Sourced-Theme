@@ -1,47 +1,40 @@
-<!-- <section class=""> -->
-<?php
-// Get All Taxonomies
-$tax = get_terms(array(
-  'taxonomy' => 'store_type',
-  'hide_empty' => false
-));
+<?php get_header();
 
-$the_terms = [];
-foreach ($tax as $t) {
-
-  array_push($the_terms, $t->term_id);
-}
-
-// var_dump($the_terms);
-// Get all posts of the specified taxonomy
+$term_id = get_queried_object_id();
 $argss = [
+  'fields' => 'ids',
   'post_type' => 'store',
   'posts_per_page' => -1,
   'tax_query' => [
     [
       'taxonomy' => 'store_type',
-      'field' => 'slug',
-      'terms' => 'Electronics'
+      'field' => 'term_id',
+      'terms' => $term_id
     ]
   ]
 ];
 $tax_posts = get_posts($argss);
-
+// var_dump($tax_posts);
 
 $args = [
   'post_per_page' => 10,
   'post_type' => 'store',
 ];
 
+$post_query = new WP_Query($argss);
 
+// var_dump($post_query);
 
-$post_query = new WP_Query($args);
 $banner_args = [
   'post_per_page',
   'post_type' => 'banner'
 ];
 $banner_query = new WP_Query($banner_args);
+
+
+
 ?>
+
 <section class="section-container">
   <?php
   while ($banner_query->have_posts()) {
@@ -115,4 +108,5 @@ $banner_query = new WP_Query($banner_args);
   </div>
 
 </section>
-<!-- </section> -->
+
+<?php get_footer(); ?>

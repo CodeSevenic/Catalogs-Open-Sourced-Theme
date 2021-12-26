@@ -5,6 +5,8 @@ $image = get_field('poster_image', get_the_ID())['sizes']['catalog-image'];
 
 $catalog_content = get_field('catalog_content', get_the_ID());
 // var_dump($banners)
+
+
 ?>
 
 <section class="section-container">

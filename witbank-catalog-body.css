@@ -335,13 +335,13 @@ ul.list.flex-division {
 }
 
 .catalog-logo {
-  margin: 0 auto;
+  margin: 5px auto;
 }
 
 .catalog-logo img {
   /* border: 1px solid #0000002b; */
   width: 100%;
-  max-width: 160px;
+  max-width: 100px;
   border-radius: 5px;
   object-fit: contain;
   height: 50px;

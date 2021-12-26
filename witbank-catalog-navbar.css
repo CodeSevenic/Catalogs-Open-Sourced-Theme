@@ -209,7 +209,7 @@ div#navbar {
 
 .parent-wrapper .cat-dropdown {
   position: relative;
-  width: 160px;
+  width: 145px;
   height: 20px;
   font-family: 'Poppins', sans-serif;
   z-index: 888;
@@ -217,7 +217,7 @@ div#navbar {
 .parent-wrapper .cat-dropdown::before {
   content: '';
   position: absolute;
-  right: 0px;
+  right: 12px;
   bottom: 5px;
   z-index: 1000;
   width: 8px;
@@ -237,6 +237,7 @@ div#navbar {
 
 .parent-wrapper .cat-dropdown input {
   position: absolute;
+  width: 145px;
   top: 0;
   left: 0;
   height: 20px;
