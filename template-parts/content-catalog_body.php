@@ -12,9 +12,8 @@ foreach ($tax as $t) {
   array_push($the_terms, $t->term_id);
 }
 
-// var_dump($the_terms);
 // Get all posts of the specified taxonomy
-$argss = [
+$tax_args = [
   'post_type' => 'store',
   'posts_per_page' => -1,
   'tax_query' => [
@@ -25,7 +24,7 @@ $argss = [
     ]
   ]
 ];
-$tax_posts = get_posts($argss);
+$tax_posts = get_posts($tax_args);
 
 
 $args = [

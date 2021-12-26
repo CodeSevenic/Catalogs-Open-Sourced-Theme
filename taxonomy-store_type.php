@@ -1,7 +1,7 @@
 <?php get_header();
 
 $term_id = get_queried_object_id();
-$argss = [
+$tax_args = [
   'fields' => 'ids',
   'post_type' => 'store',
   'posts_per_page' => -1,
@@ -13,7 +13,7 @@ $argss = [
     ]
   ]
 ];
-$tax_posts = get_posts($argss);
+$tax_posts = get_posts($tax_args);
 // var_dump($tax_posts);
 
 $args = [
@@ -21,7 +21,7 @@ $args = [
   'post_type' => 'store',
 ];
 
-$post_query = new WP_Query($argss);
+$post_query = new WP_Query($tax_args);
 
 // var_dump($post_query);
 
