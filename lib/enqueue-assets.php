@@ -7,13 +7,13 @@ function catalogs_assets()
   // Tailwind CSS
   wp_enqueue_style('catalogs-tailwind-stylesheet', get_template_directory_uri() . '/dist/assets/css/output.css', array(), '1.0.0', 'all');
   // Witbank Catalog CSS styles
-  wp_enqueue_style('witbank-catalog-stylesheet', get_template_directory_uri() . '/witbank-catalog.css', array(), '1.0.0', 'all');
+  wp_enqueue_style('witbank-catalog-stylesheet', get_template_directory_uri() . '/src/assets/css/witbank-catalog.css', array(), '1.0.0', 'all');
   // Brand Swiper CSS styles
-  wp_enqueue_style('brand_slider-stylesheet', get_template_directory_uri() . '/brand_slider.css', array(), '1.0.0', 'all');
+  wp_enqueue_style('brand_slider-stylesheet', get_template_directory_uri() . '/src/assets/css/brand_slider.css', array(), '1.0.0', 'all');
   // Brand Swiper CSS styles
-  wp_enqueue_style('catalog_body-stylesheet', get_template_directory_uri() . '/witbank-catalog-body.css', array(), '1.0.0', 'all');
+  wp_enqueue_style('catalog_body-stylesheet', get_template_directory_uri() . '/src/assets/css/witbank-catalog-body.css', array(), '1.0.0', 'all');
   // Navbar Styles
-  wp_enqueue_style('catalog_navbar-stylesheet', get_template_directory_uri() . '/witbank-catalog-navbar.css', array(), '1.0.0', 'all');
+  wp_enqueue_style('catalog_navbar-stylesheet', get_template_directory_uri() . '/src/assets/css/witbank-catalog-navbar.css', array(), '1.0.0', 'all');
 
   include(get_template_directory() . '/lib/inline-css.php');
   wp_add_inline_style('catalogs-stylesheet', $inline_styles);

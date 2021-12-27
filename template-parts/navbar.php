@@ -1,5 +1,13 @@
 <div class="container mx-auto px-1 sm:px-5 flex justify-between parent-wrapper">
-  <?php if (is_front_page()) {
+  <a class="home_icon" href="<?php echo home_url() ?>">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+      <path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z" />
+    </svg>
+  </a>
+  <?php
+  $term_id = get_queried_object_id();
+  $term_name = get_queried_object()->name;
+  if (is_front_page() || term_exists($term_id, 'store_type')) {
     // Get All Taxonomies
     $tax = get_terms(array(
       'taxonomy' => 'store_type',
@@ -7,13 +15,14 @@
     ));
   ?>
     <div class="cat-dropdown">
-      <input type="text" class="textBox" placeholder="Catagories" readonly />
+      <input id="cat_input" type="text" class="textBox" placeholder="<?php echo $term_name ?  $term_name : 'Catagories' ?>" readonly />
       <div class="option">
         <?php if ($tax) {
           foreach ($tax as $t) {
+            $the_term_link = get_term_link($t->term_id, 'store_type');
         ?>
 
-            <div onclick="show('<?php echo $t->name ?>')">
+            <div onclick="show('<?php echo $t->name ?>', '<?php echo $the_term_link ?>')" href="<?php echo $the_term_link ?>">
               <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z" />
               </svg><?php echo $t->name ?>
@@ -24,7 +33,6 @@
     </div>
   <?php } ?>
   <nav class="nav-mobile">
-
     <div class="menu-wrapper">
       <ul class="menu-bar">
         <li class="menu-title">

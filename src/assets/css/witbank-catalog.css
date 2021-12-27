@@ -22,7 +22,7 @@ input[type='search'] {
   margin: 0 auto;
   overflow-x: clip;
   width: 100%;
-  padding: 0px 15px 30px 15px;
+  padding: 0px 3% 30px 3%;
 }
 
 .store-catalogs ul {

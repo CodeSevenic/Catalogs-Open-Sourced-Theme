@@ -1,5 +1,9 @@
 @import '../../node_modules/swiper/swiper-bundle.css';
 @import '../../node_modules/swiper/modules/pagination/pagination.min.css';
+/* @import './css/brand_slider.css';
+@import './css/witbank-catalog-body.css';
+@import './css/witbank-catalog-navbar.css';
+@import './css/witbank-catalog.css'; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

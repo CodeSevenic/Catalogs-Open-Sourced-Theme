@@ -62,6 +62,9 @@ $banner_query = new WP_Query($banner_args);
   <?php }
   }
   ?>
+  <h1 class="font-semibold text-xl lg:text-2xl my-4 px-[5%] text-center md:text-left">Discover latest <span class="text-sky-700">specials</span>, <span class="text-sky-600">deals</span>, <span class="text-sky-500">magazines</span> and <span class="text-sky-800">catalogues</span>
+  </h1>
+  <hr class="py-3  border-sky-500 mx-auto w-[80%] md:w-[95%]">
   <div class="main-catalogs">
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>

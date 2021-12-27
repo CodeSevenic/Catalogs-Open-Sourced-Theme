@@ -47,10 +47,23 @@
 
    //  ============ Categories Dropdown =============== //
    const textBox = document.querySelector('.textBox')
+   const cat_input = document.getElementById('cat_input')
+
+   function redirect(goto) {
+     window.location.href = goto;
+   }
+
+   //  cat_input.onchange = function() {
+   //    var goto = this.href
+   //    redirect(goto)
+   //    console.log("HELLO")
+   //  }
    if (textBox) {
 
-     function show(anything) {
+     function show(anything, href) {
        textBox.value = anything;
+       console.log(href)
+       redirect(href)
      }
    }
 

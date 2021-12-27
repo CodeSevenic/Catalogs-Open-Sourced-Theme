@@ -5,8 +5,6 @@ $image = get_field('poster_image', get_the_ID())['sizes']['catalog-image'];
 
 $catalog_content = get_field('catalog_content', get_the_ID());
 // var_dump($banners)
-
-
 ?>
 
 <section class="section-container">
@@ -25,9 +23,9 @@ $catalog_content = get_field('catalog_content', get_the_ID());
       </div>
     </div>
   <?php } ?>
-  <div>
-    <h3>Latest Specials</h3>
-  </div>
+  <h1 class="font-semibold text-xl lg:text-2xl my-4 px-[5%] text-center md:text-left">View all featured <span class="text-sky-700">specials</span>, <span class="text-sky-600">deals</span>, <span class="text-sky-500">magazines</span> and <span class="text-sky-800">catalogues</span> from <?php the_title() ?>
+  </h1>
+  <hr class="py-3  border-sky-500 mx-auto w-[80%] md:w-[95%]">
   <div class="store-wrapper">
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>

@@ -20,6 +20,7 @@ nav.nav-mobile {
   text-align: right;
   margin-bottom: 10px;
   line-height: 0;
+  flex-grow: 1;
 }
 .drop-btn svg {
   width: 30px;
@@ -282,4 +283,20 @@ div#navbar {
 
 .parent-wrapper .cat-dropdown .option div:hover svg {
   fill: #ffffff;
+}
+
+.home_icon {
+  margin-right: 25px;
+}
+
+.home_icon svg {
+  width: 25px;
+  fill: #fff;
+  filter: drop-shadow(0px 1px 0px black);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.home_icon svg:hover {
+  fill: #7dd3fc;
 }

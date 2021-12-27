@@ -1,6 +1,7 @@
 <?php get_header();
 
 $term_id = get_queried_object_id();
+$term_name = get_queried_object()->name;
 $tax_args = [
   'fields' => 'ids',
   'post_type' => 'store',
@@ -56,10 +57,13 @@ $banner_query = new WP_Query($banner_args);
   <?php }
   }
   ?>
+  <h1 class="font-semibold text-xl lg:text-2xl my-4 px-[5%] text-center md:text-left">Magazines, specials, deals and catalogues from category: <span class="text-sky-800"><?php echo $term_name ?></span>
+  </h1>
+  <hr class="py-3  border-sky-500 mx-auto w-[80%] md:w-[95%]">
   <div class="main-catalogs">
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    <ul class="swiper-wrapper">
+    <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
+    <ul class="categories-catalogs">
       <?php
       while ($post_query->have_posts()) {
 
@@ -69,7 +73,7 @@ $banner_query = new WP_Query($banner_args);
           $image = get_field('poster_image', get_the_ID())['sizes']['catalog-image'];
         }
       ?>
-        <li class="li-brochu swiper-slide">
+        <li class="category-card">
           <article class="catalog ga-brochure-catalog">
             <div class="catalog-cover">
               <a class="catalog-anchor" href="<?php the_permalink(); ?>">

@@ -305,24 +305,6 @@ span.clear.shown {
 .button-primary:hover {
   background-color: #54a9e2;
 }
-.list {
-  list-style: none;
-  padding: 0;
-}
-
-.list-item {
-  width: 200px;
-  margin: 20px 10px;
-}
-ul.list {
-  margin: 0;
-}
-ul.list.flex-division {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  /* margin: 0 -10px; */
-}
 
 .catalog {
   background-color: #fff;
@@ -365,11 +347,23 @@ a.city_slider-logo-link {
 
 .main-catalogs {
   position: relative;
-  margin: 40px 0;
+  margin: 20px 0 40px 0;
   overflow-x: clip;
-  padding: 0 15px;
+  padding: 0 3%;
 }
 
 .main-pagination {
   bottom: -30px !important;
+}
+
+.category-card {
+  width: 100%;
+  max-width: 310px;
+  margin: 20px 0;
+}
+
+.categories-catalogs {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
 }
