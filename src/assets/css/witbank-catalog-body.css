@@ -364,6 +364,6 @@ a.city_slider-logo-link {
 
 .categories-catalogs {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-flow: wrap;
 }
