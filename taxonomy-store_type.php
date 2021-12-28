@@ -1,7 +1,8 @@
 <?php get_header();
 
-$term_id = get_queried_object_id();
 $term_name = get_queried_object()->name;
+$term_id = get_queried_object_id();
+
 $tax_args = [
   'fields' => 'ids',
   'post_type' => 'store',
@@ -14,52 +15,32 @@ $tax_args = [
     ]
   ]
 ];
-$tax_posts = get_posts($tax_args);
-// var_dump($tax_posts);
 
 $args = [
-  'post_per_page' => 10,
+  'post_per_page' => -1,
   'post_type' => 'store',
 ];
 
 $post_query = new WP_Query($tax_args);
-
-// var_dump($post_query);
-
-$banner_args = [
-  'post_per_page',
-  'post_type' => 'banner'
-];
-$banner_query = new WP_Query($banner_args);
-
-
-
 ?>
 
 <section class="section-container">
-  <?php
-  while ($banner_query->have_posts()) {
-    $banner_query->the_post();
-    $banner_image = get_field('banner_image');
-    if ($banner_image) { ?><div class="store_banner">
-        <div class="swiper-wrapper">
-          <?php
-          if ($banner_image) : ?>
-            <?php foreach ($banner_image as $banner) { ?>
-              <a class="swiper-slide" href="">
-                <img src="<?php echo $banner['url'] ?>" alt="">
-              </a>
-            <?php }; ?>
-          <?php endif;
-          ?>
-        </div>
-      </div>
-  <?php }
-  }
-  ?>
+
   <h1 class="font-semibold text-xl lg:text-2xl my-4 px-[5%] text-center md:text-left">Magazines, specials, deals and catalogues from category: <span class="text-sky-800"><?php echo $term_name ?></span>
   </h1>
   <hr class="py-3  border-sky-500 mx-auto w-[80%] md:w-[95%]">
+  <div class="mx-auto px-[5%]">
+    <?php while ($post_query->have_posts()) {
+      $post_query->the_post();
+      $logos = get_field('store_logo')['sizes']['catalog-logo']; ?>
+      <a class="" href="<?php the_permalink() ?>">
+
+        <img class="inline w-20 p-1 hover:brightness-125" src="<?php echo $logos ?>" alt="">
+      </a>
+    <?php }
+    wp_reset_postdata();
+    ?>
+  </div>
   <div class="main-catalogs">
     <!-- <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div> -->

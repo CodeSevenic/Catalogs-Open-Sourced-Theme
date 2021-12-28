@@ -1,4 +1,5 @@
 <section class="city_slider-section">
+
   <div class="city_slider">
     <div class="logo-swiper-button-prev btn-style" tabindex="0" role="button" aria-label="Previous slide"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18.804px" height="33.814px" viewBox="0 0 18.804 33.814" enable-background="new 0 0 18.804 33.814" xml:space="preserve">
         <g>
@@ -6,37 +7,57 @@
         </g>
       </svg> </div>
     <div class="swiper-container swiper-container-horizontal">
+
       <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1100px, 0px, 0px);">
-        <div class="swiper-slide box-settings ">
-          <div class="city_slider-logo" style="background-image: url(https://static.allcatalogues.co.za/img/upload/31/small_13.png);"> <a target="_self" href="https://allcatalogues.co.za/johannesburg/pick-n-pay-hyper" class="city_slider-logo-link " title="Pick n Pay Hyper"></a> </div>
-        </div>
-        <div class="swiper-slide box-settings ">
-          <div class="city_slider-logo" style="background-image: url(https://static.allcatalogues.co.za/img/upload/110/small_337ff11058bb960d3b0a194d0c5537a8.png);"> <a target="_self" href="https://allcatalogues.co.za/shops/telkom-mobile" class="city_slider-logo-link " title="Telkom Mobile"></a> </div>
-        </div>
-        <div class="swiper-slide box-settings ">
-          <div class="city_slider-logo" style="background-image: url(https://static.allcatalogues.co.za/img/upload/37/small_9448662dd721e1116c1e150bba765fd9.png);"> <a target="_self" href="https://allcatalogues.co.za/shops/avon" class="city_slider-logo-link " title="AVON"></a> </div>
-        </div>
-        <div class="swiper-slide box-settings ">
-          <div class="city_slider-logo" style="background-image: url(https://static.allcatalogues.co.za/img/upload/44/small_5d2a085456c6f8ee109a2719a6fccb5c.png);"> <a target="_self" href="https://allcatalogues.co.za/shops/tupperware" class="city_slider-logo-link " title="Tupperware"></a> </div>
-        </div>
-        <div class="swiper-slide box-settings ">
-          <div class="city_slider-logo" style="background-image: url(https://static.allcatalogues.co.za/img/upload/31/small_28.png);"> <a target="_self" href="https://allcatalogues.co.za/johannesburg/builders-warehouse" class="city_slider-logo-link " title="Builders Warehouse"></a> </div>
-        </div>
-        <div class="swiper-slide box-settings">
-          <div class="city_slider-logo" style="background-image: url(https://static.allcatalogues.co.za/img/upload/31/small_36.png);"> <a target="_self" href="https://allcatalogues.co.za/johannesburg/ok-furniture" class="city_slider-logo-link " title="OK Furniture"></a> </div>
-        </div>
-        <div class="swiper-slide box-settings ">
-          <div class="city_slider-logo" style="background-image: url(https://static.allcatalogues.co.za/img/upload/31/small_9.png);"> <a target="_self" href="https://allcatalogues.co.za/johannesburg/shoprite" class="city_slider-logo-link " title="Shoprite"></a> </div>
-        </div>
-        <div class="swiper-slide box-settings ">
-          <div class="city_slider-logo" style="background-image: url(https://static.allcatalogues.co.za/img/upload/31/small_2.png);"> <a target="_self" href="https://allcatalogues.co.za/johannesburg/checkers" class="city_slider-logo-link " title="Checkers"></a> </div>
-        </div>
-        <div class="swiper-slide box-settings">
-          <div class="city_slider-logo" style="background-image: url(https://static.allcatalogues.co.za/img/upload/174/small_71fad12a1c50d1ca3e5cbba3db5a2eb8.png);"> <a target="_self" href="https://allcatalogues.co.za/johannesburg/game" class="city_slider-logo-link " title="Game"></a> </div>
-        </div>
-        <div class="swiper-slide box-settings">
-          <div class="city_slider-logo" style="background-image: url(https://static.allcatalogues.co.za/img/upload/200/small_ee462edda9ee7f509135f338d7681b28.png);"> <a target="_self" href="https://allcatalogues.co.za/johannesburg/makro" class="city_slider-logo-link " title="Makro"></a> </div>
-        </div>
+        <?php
+        // Query posts by Taxonomy
+        $term_id = get_queried_object_id();
+        $tax_args = [
+          'fields' => 'ids',
+          'post_type' => 'store',
+          'posts_per_page' => -1,
+          'tax_query' => [
+            [
+              'taxonomy' => 'store_type',
+              'field' => 'term_id',
+              'terms' => $term_id
+            ]
+          ]
+        ];
+
+        // Query all store posts
+        $args = [
+          'post_per_page' => -1,
+          'post_type' => 'store',
+        ];
+
+        $post_query;
+
+        if (term_exists($term_id, 'store_type')) {
+          $post_query = new WP_Query($tax_args);
+        } else {
+          $post_query = new WP_Query($args);
+        }
+
+        while ($post_query->have_posts()) {
+          $post_query->the_post();
+
+          if (get_field('poster_image', get_the_ID())) {
+            $content = get_field('poster_image', get_the_ID())['sizes']['catalog-image'];
+          }
+
+          if (get_field('store_logo')) { ?>
+            <div class="swiper-slide box-settings ">
+              <div class="city_slider-logo" style="background-image: url(<?php echo get_field('store_logo')['sizes']['catalog-logo'] ?>);"> <a target="_self" href="<?php the_permalink() ?>" class="city_slider-logo-link " title="<?php the_title() ?>"></a> </div>
+            </div>
+
+          <?php }
+          ?>
+        <?php
+        }
+        wp_reset_postdata();
+        ?>
+
 
       </div> <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
     </div>

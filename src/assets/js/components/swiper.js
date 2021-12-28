@@ -30,9 +30,9 @@ export const logoSlider = new Swiper('.swiper-container', {
     },
   },
   // Auto play
-  autoplay: {
-    delay: 2000,
-  },
+  // autoplay: {
+  //   delay: 2000,
+  // },
   // Navigation arrows
   navigation: {
     nextEl: '.logo-swiper-button-next',
