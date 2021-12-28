@@ -40,55 +40,55 @@ $post_query = new WP_Query($tax_args);
     wp_reset_postdata();
     ?>
   </div>
-  <!-- <div class="main-catalogs"> -->
-  <!-- <div class="swiper-button-prev"></div>
+  <div class="main-catalogs">
+    <!-- <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div> -->
-  <ul class="categories-catalogs">
-    <?php
-    while ($post_query->have_posts()) {
+    <ul class="categories-catalogs">
+      <?php
+      while ($post_query->have_posts()) {
 
-      $post_query->the_post();
+        $post_query->the_post();
 
-      if (get_field('poster_image', get_the_ID())) {
-        $image = get_field('poster_image', get_the_ID())['sizes']['catalog-image'];
-      }
-    ?>
-      <li class="category-card">
-        <article class="catalog ga-brochure-catalog">
-          <div class="catalog-cover">
-            <a class="catalog-anchor" href="<?php the_permalink(); ?>">
-              <div class="catalog-image">
-                <div class="catalog-border">
-                  <img src="<?php if ($image) echo $image ?>" alt="Catalogue Game Johannesburg">
-                  <div class="catalog-mask"> <span class="button button-bold button-primary">View Catalog</span> </div>
+        if (get_field('poster_image', get_the_ID())) {
+          $image = get_field('poster_image', get_the_ID())['sizes']['catalog-image'];
+        }
+      ?>
+        <li class="category-card">
+          <article class="catalog ga-brochure-catalog">
+            <div class="catalog-cover">
+              <a class="catalog-anchor" href="<?php the_permalink(); ?>">
+                <div class="catalog-image">
+                  <div class="catalog-border">
+                    <img src="<?php if ($image) echo $image ?>" alt="Catalogue Game Johannesburg">
+                    <div class="catalog-mask"> <span class="button button-bold button-primary">View Catalog</span> </div>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <header class="catalog-header">
-            <span class="catalog-date">
-              <?php echo get_field('start_date') ?> - <?php echo get_field('end_date') ?> </span>
-            <?php if (get_field('cover_title')) { ?>
-              <h4 class="catalog-title"><?php echo get_field('cover_title') ?></h4>
-            <?php } ?>
-          </header>
-          <?php
-          if (get_field('store_logo')) { ?>
-            <div class="catalog-logo"> <a href="<?php the_permalink() ?>" class="city_slider-logo-link ">
-                <img src="<?php echo get_field('store_logo')['sizes']['catalog-logo'] ?>" alt="">
-              </a> </div> <?php } else { ?>
-            <div class="catalog-website">
-              <a href="<?php the_permalink() ?>" target="_blank"><?php the_title() ?></a>
+              </a>
             </div>
-          <?php }
-          ?>
-        </article>
-      </li>
-    <?php   }
-    wp_reset_postdata();
-    ?>
-  </ul>
-  <div class="swiper-pagination main-pagination"></div>
+            <header class="catalog-header">
+              <span class="catalog-date">
+                <?php echo get_field('start_date') ?> - <?php echo get_field('end_date') ?> </span>
+              <?php if (get_field('cover_title')) { ?>
+                <h4 class="catalog-title"><?php echo get_field('cover_title') ?></h4>
+              <?php } ?>
+            </header>
+            <?php
+            if (get_field('store_logo')) { ?>
+              <div class="catalog-logo"> <a href="<?php the_permalink() ?>" class="city_slider-logo-link ">
+                  <img src="<?php echo get_field('store_logo')['sizes']['catalog-logo'] ?>" alt="">
+                </a> </div> <?php } else { ?>
+              <div class="catalog-website">
+                <a href="<?php the_permalink() ?>" target="_blank"><?php the_title() ?></a>
+              </div>
+            <?php }
+            ?>
+          </article>
+        </li>
+      <?php   }
+      wp_reset_postdata();
+      ?>
+    </ul>
+    <div class="swiper-pagination main-pagination"></div>
   </div>
 
 </section>
