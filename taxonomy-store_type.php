@@ -34,7 +34,7 @@ $post_query = new WP_Query($tax_args);
       $post_query->the_post();
       $logos = get_field('store_logo')['sizes']['catalog-logo']; ?>
       <a class="" href="<?php the_permalink() ?>">
-        <img class="inline w-20 p-1 hover:brightness-125" src="<?php echo $logos ?>" alt="">
+        <img class="inline w-20 p-1 hover:brightness-125" src="<?php echo $logos ?>" alt="<?php the_title() ?>">
       </a>
     <?php }
     wp_reset_postdata();
