@@ -17,7 +17,7 @@ $tax_args = [
 ];
 
 $args = [
-  'post_per_page' => -1,
+  'posts_per_page' => -1,
   'post_type' => 'store',
 ];
 

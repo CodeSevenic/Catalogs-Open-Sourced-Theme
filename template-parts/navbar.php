@@ -6,7 +6,11 @@
   </a>
   <?php
   $term_id = get_queried_object_id();
-  $term_name = get_queried_object()->name;
+  if (get_queried_object()) {
+    $term_name = get_queried_object()->name;
+  } else {
+    $term_name = '';
+  }
   // if (is_front_page() || term_exists($term_id, 'store_type')) {
   // Get All Taxonomies
   $tax = get_terms(array(
