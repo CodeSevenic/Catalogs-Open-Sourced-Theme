@@ -27,7 +27,7 @@
 
 
 
-    $product_query = new WP_Query($product_args);
+    // $product_query = new WP_Query($product_args);
     while ($product_query->have_posts()) {
 
       $product_query->the_post();
