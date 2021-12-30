@@ -1,4 +1,4 @@
-<section class="city_slider-section">
+<section class="city_slider-section bg-white py-1">
 
   <div class="city_slider">
     <div class="logo-swiper-button-prev btn-style" tabindex="0" role="button" aria-label="Previous slide"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18.804px" height="33.814px" viewBox="0 0 18.804 33.814" enable-background="new 0 0 18.804 33.814" xml:space="preserve">

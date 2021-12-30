@@ -24,7 +24,7 @@ $args = [
 $post_query = new WP_Query($tax_args);
 ?>
 
-<section class="section-container">
+<section class="section-container container mx-auto">
 
   <h1 class="font-semibold text-xl lg:text-2xl my-4 px-[5%] text-center md:text-left">Magazines, specials, deals and catalogues from category: <span class="text-sky-800"><?php echo $term_name ?></span>
   </h1>

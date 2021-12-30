@@ -53,7 +53,13 @@ button::-moz-focus-inner {
 }
 
 .custom_search.active {
-  width: 360px;
+  width: 50%;
+}
+
+@media (max-width: 480px) {
+  .custom_search.active {
+    width: 100%;
+  }
 }
 
 .custom_search .icon {
@@ -92,7 +98,7 @@ button::-moz-focus-inner {
 
 .custom_search .input {
   position: relative;
-  width: 300px;
+  width: 100%;
   height: 40px;
   left: 40px;
   display: flex;
@@ -108,7 +114,7 @@ button::-moz-focus-inner {
   border: none;
   outline: none;
   font-size: 0.9rem;
-  padding: 0 83px 0 0;
+  padding: 0 125px 0 0;
 }
 
 .custom_search .clear {
@@ -366,4 +372,102 @@ a.city_slider-logo-link {
   display: flex;
   justify-content: center;
   flex-flow: wrap;
+}
+
+@media (max-width: 3000px) {
+  .categories-catalogs-sm {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+  }
+  .category-card-sm {
+    max-width: 160px;
+    width: 160px;
+    margin: 10px 5px;
+  }
+  .catalog .catalog-header-sm {
+    width: 100%;
+    height: 40px;
+    padding-bottom: 40px;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .catalog .catalog-date-sm {
+    font-size: 0.7rem;
+    color: black;
+    font-weight: bold;
+  }
+  .catalog .catalog-title-sm {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #2b2f35;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    font-family: Comfortaa, cursive;
+    line-height: 1.1;
+    max-width: 170px;
+    margin: 0 auto;
+    text-overflow: ellipsis;
+  }
+  .catalog-logo-sm img {
+    width: 100%;
+    max-width: 100px;
+    border-radius: 5px;
+    object-fit: contain;
+    height: 30px;
+    transition: all 0.3s ease-in-out;
+  }
+  .catalog .catalog-image-sm img {
+    object-fit: contain;
+    height: 180px;
+    width: 100%;
+  }
+
+  .catalog .catalog-image-sm .catalog-border {
+    margin: 0px 5px 0px 5px;
+    display: flex;
+    background-color: #fff;
+    border-left: 0;
+    position: relative;
+  }
+
+  .catalog-image-sm .catalog-mask .button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100px;
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .category-card-sm {
+    max-width: 160px;
+    width: 130px;
+    margin: 5px 0px;
+  }
+  .catalog .catalog-date-sm {
+    font-size: 0.5rem;
+  }
+  .catalog .catalog-title-sm {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalog .catalog-mask .button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100px;
+    font-size: 0.6rem;
+  }
 }

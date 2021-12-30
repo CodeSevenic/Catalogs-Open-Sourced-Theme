@@ -238,6 +238,11 @@ div#navbar {
   font-family: 'Poppins', sans-serif;
   z-index: 888;
 }
+@media (max-width: 300px) {
+  .parent-wrapper .cat-dropdown {
+    display: none;
+  }
+}
 .parent-wrapper .cat-dropdown::before {
   content: '';
   position: absolute;
@@ -312,8 +317,14 @@ div#navbar {
   margin-right: 25px;
 }
 
+@media (max-width: 480px) {
+  .home_icon {
+    display: none;
+  }
+}
+
 .home_icon svg {
-  width: 25px;
+  width: 30px;
   fill: #fff;
   filter: drop-shadow(0px 1px 0px black);
   cursor: pointer;

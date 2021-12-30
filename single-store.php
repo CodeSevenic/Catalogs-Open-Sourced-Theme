@@ -7,7 +7,7 @@ $catalog_content = get_field('catalog_content', get_the_ID());
 // var_dump($banners)
 ?>
 
-<section class="section-container">
+<section class="section-container container mx-auto">
   <!-- banner image -->
   <?php if ($banners) { ?><div class="store_banner">
       <div class="swiper-wrapper">
