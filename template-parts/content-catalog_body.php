@@ -41,7 +41,7 @@ $banner_args = [
 ];
 $banner_query = new WP_Query($banner_args);
 ?>
-<section class="section-container container mx-auto">
+<section class="section-container container mx-auto pb-10">
   <?php
   while ($banner_query->have_posts()) {
     $banner_query->the_post();
@@ -128,7 +128,7 @@ $banner_query = new WP_Query($banner_args);
       <?php
       $product_args = [
         'post_type' => 'store',
-        'posts_per_page' => 8,
+        'posts_per_page' => 5,
       ];
 
       $product_query = new WP_Query($product_args);
@@ -175,7 +175,11 @@ $banner_query = new WP_Query($banner_args);
       wp_reset_query();
       ?>
     </ul>
-
+  </div>
+  <div class="flex justify-center py-6">
+    <a href="<?php echo esc_url(home_url('/catalogs/page/2')); ?>">
+      <button class="bg-sky-700 px-4 py-2 hover:bg-sky-600 transition-all text-white">View More</button>
+    </a>
   </div>
 
 </section>

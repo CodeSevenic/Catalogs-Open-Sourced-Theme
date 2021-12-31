@@ -41,9 +41,7 @@ $post_query = new WP_Query($tax_args);
     ?>
   </div>
   <div class="main-catalogs">
-    <!-- <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div> -->
-    <ul class="categories-catalogs">
+    <ul class="categories-catalogs-sm">
       <?php
       while ($post_query->have_posts()) {
 
@@ -53,11 +51,11 @@ $post_query = new WP_Query($tax_args);
           $image = get_field('poster_image', get_the_ID())['sizes']['catalog-image'];
         }
       ?>
-        <li class="category-card">
-          <article class="catalog ga-brochure-catalog">
+        <li class="category-card-sm">
+          <article class="catalog">
             <div class="catalog-cover">
               <a class="catalog-anchor" href="<?php the_permalink(); ?>">
-                <div class="catalog-image">
+                <div class="catalog-image-sm">
                   <div class="catalog-border">
                     <img src="<?php if ($image) echo $image ?>" alt="Catalogue Game Johannesburg">
                     <div class="catalog-mask"> <span class="button button-bold button-primary">View Catalog</span> </div>
@@ -65,16 +63,16 @@ $post_query = new WP_Query($tax_args);
                 </div>
               </a>
             </div>
-            <header class="catalog-header">
-              <span class="catalog-date">
+            <header class="catalog-header-sm">
+              <span class="catalog-date-sm">
                 <?php echo get_field('start_date') ?> - <?php echo get_field('end_date') ?> </span>
               <?php if (get_field('cover_title')) { ?>
-                <h4 class="catalog-title"><?php echo get_field('cover_title') ?></h4>
+                <h4 class="catalog-title-sm"><?php echo get_field('cover_title') ?></h4>
               <?php } ?>
             </header>
             <?php
             if (get_field('store_logo')) { ?>
-              <div class="catalog-logo"> <a href="<?php the_permalink() ?>" class="city_slider-logo-link ">
+              <div class="catalog-logo-sm"> <a href="<?php the_permalink() ?>" class="city_slider-logo-link ">
                   <img src="<?php echo get_field('store_logo')['sizes']['catalog-logo'] ?>" alt="">
                 </a> </div> <?php } else { ?>
               <div class="catalog-website">

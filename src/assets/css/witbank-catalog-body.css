@@ -53,7 +53,7 @@ button::-moz-focus-inner {
 }
 
 .custom_search.active {
-  width: 50%;
+  width: 40%;
 }
 
 @media (max-width: 480px) {
@@ -470,4 +470,76 @@ a.city_slider-logo-link {
     width: 100px;
     font-size: 0.6rem;
   }
+}
+
+/* Navigation buttons */
+
+.navigation-buttons .prev {
+  position: relative;
+  padding: 0.03rem 0.4rem 0.1rem 0.4rem;
+  background-color: #0e76a8;
+  color: #e9e9e9;
+  text-align: center;
+  width: 90px;
+  transition: all 0.3s;
+}
+.navigation-buttons .next {
+  position: relative;
+  padding: 0.03rem 0.4rem 0.1rem 0.4rem;
+  background-color: #0e76a8;
+  color: #e9e9e9;
+  text-align: center;
+  width: 90px;
+  transition: all 0.3s;
+}
+
+.navigation-buttons .prev::before {
+  position: absolute;
+  content: '';
+  border-right: 15px solid #0e76a8;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  left: -8px;
+  bottom: 0;
+  top: 0;
+  transition: all 0.3s;
+}
+
+.navigation-buttons .next::after {
+  position: absolute;
+  content: '';
+  border-left: 15px solid #0e76a8;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  right: -8px;
+  bottom: 0;
+  top: 0;
+  transition: all 0.3s;
+}
+
+.page-numbers {
+  background-color: #0e76a8;
+  width: 26px;
+  height: 26px;
+  border-radius: 26px;
+  margin: 5px;
+  text-align: center;
+  color: #e9e9e9;
+  transition: all 0.3s;
+}
+
+.page-numbers.current {
+  background-color: #0a374d;
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+.navigation-buttons .page-numbers.prev:hover::before {
+  border-right: 15px solid #06425e !important;
+}
+.navigation-buttons .page-numbers.next:hover::after {
+  border-left: 15px solid #06425e !important;
+}
+.page-numbers:hover {
+  background-color: #06425e !important;
 }
