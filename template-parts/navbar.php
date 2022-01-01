@@ -80,34 +80,38 @@
         }
         ?>
       </ul>
-      <?php  // Posts by terms
-      $the_terms = [];
-      foreach ($tax as $t) {
-        array_push($the_terms, $t->term_id);
-      }
+      <ul class="menu-list-drop children-drops">
+        <?php  // Posts by terms
+        $the_terms = [];
+        foreach ($tax as $t) {
+          array_push($the_terms, $t->term_id);
+        }
 
-      $all_posts = array(
-        'posts_per_page' => -1,
-        'post_type' => 'store',
-        'tax_query' => array(
-          'taxonomy' => 'store_type',
-          'field' => 'term_id',
-          'terms' => $the_terms
-        )
-      );
+        $all_posts = array(
+          'posts_per_page' => -1,
+          'post_type' => 'store',
+          'tax_query' => array(
+            'taxonomy' => 'store_type',
+            'field' => 'term_id',
+            'terms' => $the_terms
+          )
+        );
 
-      $query_term_posts = new WP_Query($all_posts);
-      while ($query_term_posts->have_posts()) {
-        $query_term_posts->the_post(); ?>
-        <ul class="menu-list-drop children-drops">
+        $query_term_posts = new WP_Query($all_posts);
+        while ($query_term_posts->have_posts()) {
+          $query_term_posts->the_post();
+          echo the_title()
+        ?>
+
           <li class="arrow back-btn">
             <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
               <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
             </svg>Back
           </li>
           <li><a href="/bluff-meat-supply/"><?php echo the_title() ?></a></li>
-        </ul>
-      <?php    } ?>
+
+        <?php    } ?>
+      </ul>
       <!-- Groceries list -->
       <ul class="menu-list-drop children-drops">
         <li class="arrow back-btn">
