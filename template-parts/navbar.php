@@ -16,7 +16,6 @@
   } else {
     $term_name = '';
   }
-  // if (is_front_page() || term_exists($term_id, 'store_type')) {
   // Get All Taxonomies
   $tax = get_terms(array(
     'taxonomy' => 'store_type',
@@ -40,7 +39,7 @@
       } ?>
     </div>
   </div>
-  <?php // } 
+  <?php
   ?>
 
   <nav class="nav-mobile">
@@ -56,7 +55,25 @@
             Menu
           </a>
         </li>
-        <li class="menu-list">
+        <?php
+        if ($tax) {
+          foreach ($tax as $t) { ?>
+            <li class="menu-list">
+              <a href="#">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+
+                    <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
+                  </svg>
+                </div>
+                <?php echo $t->name ?> <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                  <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+                </svg>
+              </a>
+            </li>
+        <?php  }
+        }
+        ?>
+        <!-- <li class="menu-list">
           <a href="#">
             <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
@@ -140,7 +157,7 @@
               <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
             </svg>
           </a>
-        </li>
+        </li> -->
       </ul>
       <!-- Groceries list -->
       <ul class="menu-list-drop children-drops">
