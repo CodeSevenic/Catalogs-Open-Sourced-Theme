@@ -15,6 +15,8 @@
    const menu_bar = document.querySelector('.menu-bar');
 
    //  Main category Items
+   const menu_list = document.querySelectorAll('.menu-list');
+
    const groceries_list = document.querySelector('.groceries-list');
    const electronics_list = document.querySelector('.electronics-list');
 
@@ -25,6 +27,8 @@
    const vehicles_list = document.querySelector('.vehicles-list');
    const other_list = document.querySelector('.other-list');
    // Category child items
+   const menu_list_drop = document.querySelectorAll('.menu-list-drop');
+
    const groceries_drop = document.querySelector('.groceries-drop');
    const electronics_drop = document.querySelector('.electronics-drop');
 
@@ -35,7 +39,8 @@
    const vehicles_drop = document.querySelector('.vehicles-drop');
    const other_drop = document.querySelector('.other-drop');
    //  Back Buttons
-   const back_groceries_btn = document.querySelector('.back-groceries-btn');
+   const back_btn = document.querySelectorAll('.back-btn');
+
    const back_electronics_btn = document.querySelector('.back-electronics-btn');
 
    const back_home_btn = document.querySelector('.back-home-btn');
@@ -91,79 +96,21 @@
      }
    });
    // Main Categories action functions
-   groceries_list.onclick = () => {
-     menu_bar.style.display = 'none';
-     groceries_drop.style.display = 'block';
-   };
-
-   electronics_list.onclick = () => {
-     menu_bar.style.display = 'none';
-     electronics_drop.style.display = 'block';
-   };
-
-   home_and_garden_list.onclick = () => {
-     menu_bar.style.display = 'none';
-     home_drop.style.display = 'block';
-   };
-
-   clothing_list.onclick = () => {
-     menu_bar.style.display = 'none';
-     clothing_drop.style.display = 'block';
-   };
-
-   health_list.onclick = () => {
-     menu_bar.style.display = 'none';
-     health_drop.style.display = 'block';
-   };
-
-   vehicles_list.onclick = () => {
-     menu_bar.style.display = 'none';
-     vehicles_drop.style.display = 'block';
-   };
-
-   other_list.onclick = () => {
-     menu_bar.style.display = 'none';
-     other_drop.style.display = 'block';
-   };
+   console.log(menu_list)
+   menu_list.forEach((element, key) => {
+     element.onclick = () => {
+       menu_bar.style.display = 'none';
+       menu_list_drop[key].style.display = 'block';
+     };
+   });
 
    //  Back action functions
-   back_groceries_btn.onclick = () => {
-     groceries_drop.style.display = 'none';
-     menu_bar.style.display = 'block';
-
-   };
-
-   back_electronics_btn.onclick = () => {
-     electronics_drop.style.display = 'none';
-     menu_bar.style.display = 'block';
-   };
-
-   back_home_btn.onclick = () => {
-     home_drop.style.display = 'none';
-     menu_bar.style.display = 'block';
-
-   };
-
-   back_clothing_btn.onclick = () => {
-     clothing_drop.style.display = 'none';
-     menu_bar.style.display = 'block';
-   };
-
-   back_health_btn.onclick = () => {
-     health_drop.style.display = 'none';
-     menu_bar.style.display = 'block';
-
-   };
-
-   back_vehicles_btn.onclick = () => {
-     vehicles_drop.style.display = 'none';
-     menu_bar.style.display = 'block';
-   };
-
-   back_other_btn.onclick = () => {
-     other_drop.style.display = 'none';
-     menu_bar.style.display = 'block';
-   };
+   back_btn.forEach((element, key) => {
+     element.onclick = () => {
+       menu_list_drop[key].style.display = 'none';
+       menu_bar.style.display = 'block';
+     };
+   });
  </script>
  </body>
 
