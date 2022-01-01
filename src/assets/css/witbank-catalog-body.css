@@ -543,3 +543,40 @@ a.city_slider-logo-link {
 .page-numbers:hover {
   background-color: #06425e !important;
 }
+
+/* Button spikes */
+.button-spikes {
+  position: relative;
+}
+.button-spikes::before {
+  position: absolute;
+  content: '';
+  border-right: 15px solid #0369a1;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  left: -8px;
+  bottom: 0;
+  top: 0;
+  transition: all 0.2s;
+}
+
+.button-spikes::after {
+  position: absolute;
+  content: '';
+  border-left: 15px solid #0369a1;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  right: -8px;
+  bottom: 0;
+  top: 0;
+  transition: all 0.2s;
+}
+.button-spikes:hover::before {
+  border-right: 15px solid #06425e !important;
+}
+.button-spikes:hover::after {
+  border-left: 15px solid #06425e !important;
+}
+.button-spikes:hover {
+  background-color: #06425e !important;
+}

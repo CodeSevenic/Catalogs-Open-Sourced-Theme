@@ -53,11 +53,6 @@
      window.location.href = goto;
    }
 
-   //  cat_input.onchange = function() {
-   //    var goto = this.href
-   //    redirect(goto)
-   //    console.log("HELLO")
-   //  }
    if (textBox) {
 
      function show(anything, href) {

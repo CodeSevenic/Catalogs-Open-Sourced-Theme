@@ -22,7 +22,7 @@
       // var_dump($paged);
       $product_args = [
         'post_type' => 'store',
-        'posts_per_page' => 5,
+        'posts_per_page' => 6,
         'paged' => $paged,
       ];
 

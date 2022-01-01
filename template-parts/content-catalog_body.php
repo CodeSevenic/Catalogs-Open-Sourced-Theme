@@ -128,7 +128,7 @@ $banner_query = new WP_Query($banner_args);
       <?php
       $product_args = [
         'post_type' => 'store',
-        'posts_per_page' => 5,
+        'posts_per_page' => 6,
       ];
 
       $product_query = new WP_Query($product_args);
@@ -178,7 +178,7 @@ $banner_query = new WP_Query($banner_args);
   </div>
   <div class="flex justify-center py-6">
     <a href="<?php echo esc_url(home_url('/catalogs/page/2')); ?>">
-      <button class="bg-sky-700 px-4 py-2 hover:bg-sky-600 transition-all text-white">View More</button>
+      <button class="bg-sky-700 px-4 py-2  text-white button-spikes">View More</button>
     </a>
   </div>
 
