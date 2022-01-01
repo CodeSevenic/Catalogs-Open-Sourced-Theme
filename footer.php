@@ -35,7 +35,6 @@
 
      function show(anything, href) {
        textBox.value = anything;
-       console.log(href)
        redirect(href)
      }
    }
