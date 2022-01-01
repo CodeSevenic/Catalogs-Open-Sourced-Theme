@@ -17,38 +17,11 @@
    //  Main category Items
    const menu_list = document.querySelectorAll('.menu-list');
 
-   const groceries_list = document.querySelector('.groceries-list');
-   const electronics_list = document.querySelector('.electronics-list');
-
-   const home_and_garden_list = document.querySelector('.home-list');
-   const clothing_list = document.querySelector('.clothing-list');
-
-   const health_list = document.querySelector('.health-list');
-   const vehicles_list = document.querySelector('.vehicles-list');
-   const other_list = document.querySelector('.other-list');
    // Category child items
    const menu_list_drop = document.querySelectorAll('.menu-list-drop');
 
-   const groceries_drop = document.querySelector('.groceries-drop');
-   const electronics_drop = document.querySelector('.electronics-drop');
-
-   const home_drop = document.querySelector('.home-drop');
-   const clothing_drop = document.querySelector('.clothing-drop');
-
-   const health_drop = document.querySelector('.health-drop');
-   const vehicles_drop = document.querySelector('.vehicles-drop');
-   const other_drop = document.querySelector('.other-drop');
    //  Back Buttons
    const back_btn = document.querySelectorAll('.back-btn');
-
-   const back_electronics_btn = document.querySelector('.back-electronics-btn');
-
-   const back_home_btn = document.querySelector('.back-home-btn');
-   const back_clothing_btn = document.querySelector('.back-clothing-btn');
-
-   const back_health_btn = document.querySelector('.back-health-btn');
-   const back_vehicles_btn = document.querySelector('.back-vehicles-btn');
-   const back_other_btn = document.querySelector('.back-other-btn');
 
    //  ============ Categories Dropdown =============== //
    const textBox = document.querySelector('.textBox')
@@ -96,7 +69,6 @@
      }
    });
    // Main Categories action functions
-   console.log(menu_list)
    menu_list.forEach((element, key) => {
      element.onclick = () => {
        menu_bar.style.display = 'none';
