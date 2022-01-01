@@ -6,12 +6,6 @@ $tax = get_terms(array(
   'hide_empty' => false
 ));
 
-$the_terms = [];
-foreach ($tax as $t) {
-
-  array_push($the_terms, $t->term_id);
-}
-
 // Get all posts of the specified taxonomy
 $tax_args = [
   'post_type' => 'store',
@@ -25,7 +19,6 @@ $tax_args = [
   ]
 ];
 $tax_posts = get_posts($tax_args);
-
 
 $args = [
   'posts_per_page' => -1,

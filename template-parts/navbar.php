@@ -21,12 +21,6 @@
     'taxonomy' => 'store_type',
     'hide_empty' => false
   ));
-
-  // Get All Taxonomies
-  $tax = get_terms(array(
-    'taxonomy' => 'store_type',
-    'hide_empty' => false
-  ));
   ?>
   <div class="cat-dropdown">
     <input id="cat_input" type="text" class="textBox" placeholder="<?php echo $term_name ?  $term_name : 'Catagories' ?>" readonly />
@@ -80,173 +74,45 @@
         }
         ?>
       </ul>
-      <ul class="menu-list-drop children-drops">
-        <?php  // Posts by terms
-        $the_terms = [];
-        foreach ($tax as $t) {
-          array_push($the_terms, $t->term_id);
-        }
+      <?php
+      // Get All Taxonomies
+      $tax = get_terms(array(
+        'taxonomy' => 'store_type',
+        'hide_empty' => false
+      ));
 
-        $all_posts = array(
-          'posts_per_page' => -1,
+      foreach ($tax as $t) {
+        // Posts by terms
+        $tax_args_ = [
+          // 'fields' => 'ids',
           'post_type' => 'store',
-          'tax_query' => array(
-            'taxonomy' => 'store_type',
-            'field' => 'term_id',
-            'terms' => $the_terms
-          )
-        );
-
-        $query_term_posts = new WP_Query($all_posts);
-        while ($query_term_posts->have_posts()) {
-          $query_term_posts->the_post();
-          echo the_title()
-        ?>
-
+          'posts_per_page' => -1,
+          'tax_query' => [
+            [
+              'taxonomy' => 'store_type',
+              'field' => 'term_id',
+              'terms' => $t->term_id
+            ]
+          ]
+        ];
+        $menu_items = get_posts($tax_args_);
+      ?>
+        <ul class="menu-list-drop children-drops">
           <li class="arrow back-btn">
             <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
               <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
             </svg>Back
           </li>
-          <li><a href="/bluff-meat-supply/"><?php echo the_title() ?></a></li>
+          <?php foreach ($menu_items as $val) { ?>
+            <li><a href="<?php echo get_permalink($val) ?>"><?php echo $val->post_title ?></a></li>
+          <?php  }
+          ?>
+        </ul>
+      <?php }
 
-        <?php    } ?>
-      </ul>
-      <!-- Groceries list -->
-      <ul class="menu-list-drop children-drops">
-        <li class="arrow back-btn">
-          <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
-          </svg>Back
-        </li>
-        <li><a href="/bluff-meat-supply/">Bluff Meat Supply</a></li>
-        <li><a href="/boxer/">Boxer</a></li>
-        <li><a href="/cambridge-foods/">Cambridge Foods</a></li>
-        <li><a href="/checkers/">Checkers</a></li>
-        <li><a href="/food-lovers-market/">Food Lover's Market</a></li>
-        <li>
-          <a href="/kit-kat-cash-carry/">KIT KAT Cash &amp; Carry</a>
-        </li>
-        <li><a href="/kwikspar/">KWIKSPAR</a></li>
-        <li><a href="/makro/">Makro</a></li>
-        <li><a href="/ok-foods/">OK Foods</a></li>
-        <li><a href="/oxford-freshmarket/">Oxford Freshmarket</a></li>
-        <li><a href="/pick-n-pay/">Pick n Pay</a></li>
-        <li><a href="/president-hyper/">President Hyper</a></li>
-        <li><a href="/shoprite/">Shoprite</a></li>
-        <li><a href="/spar/">Spar</a></li>
-        <li><a href="/superspar/">Superspar</a></li>
-        <li><a href="/take-n-pay/">Take n Pay</a></li>
-        <li><a href="/ultra-liquors/">Ultra Liquors</a></li>
-        <li><a href="/woolworths/">Woolworths</a></li>
-      </ul>
-      <!-- Electronics list -->
-      <ul class="menu-list-drop children-drops">
-        <li class="arrow back-btn">
-          <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
-          </svg>Back
-        </li>
-        <li><a href="/bt-games/">BT Games</a></li>
-        <li><a href="/cash-crusaders/">Cash Crusaders</a></li>
-        <li><a href="/cell-c/">Cell C</a></li>
-        <li><a href="/dion-wired/">Dion Wired</a></li>
-        <li><a href="/game/">Game</a></li>
-        <li><a href="/matrix-warehouse/">Matrix Warehouse</a></li>
-        <li><a href="/mtn/">MTN</a></li>
-        <li><a href="/teljoy/">Teljoy</a></li>
-        <li><a href="/telkom/">Telkom</a></li>
-        <li><a href="/vodacom/">Vodacom</a></li>
-      </ul>
-      <!-- Home & Garden list -->
-      <ul class="menu-list-drop children-drops">
-        <li class="arrow back-btn">
-          <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
-          </svg>Back
-        </li>
-        <li><a href="/agrimark/">Agrimark</a></li>
-        <li><a href="/bradlows/">Bradlows</a></li>
-        <li><a href="/build-it/">Build It</a></li>
-        <li><a href="/builders/">Builders</a></li>
-        <li><a href="/cashbuild/">Cashbuild</a></li>
-        <li><a href="/coricraft/">Coricraft</a></li>
-        <li><a href="/ctm/">CTM</a></li>
-        <li><a href="/decofurn/">Decofurn</a></li>
-        <li><a href="/dial-a-bed/">Dial-a-Bed</a></li>
-        <li>
-          <a href="/every-body-wants-that/">Every Body Wants That</a>
-        </li>
-        <li><a href="/fair-price/">Fair Price</a></li>
-        <li><a href="/house-and-home/">House and Home</a></li>
-        <li><a href="/k-carrim/">K. Carrim</a></li>
-        <li><a href="/lewis-stores/">Lewis Stores</a></li>
-        <li><a href="/mrp-home/">MRP Home</a></li>
-        <li><a href="/ok-furniture/">OK Furniture</a></li>
-        <li><a href="/russels/">Russels</a></li>
-        <li><a href="/schulmans-home/">Schulman's Home</a></li>
-        <li><a href="/sheet-street/">Sheet Street</a></li>
-        <li><a href="/tafelberg-furnishers/">Tafelberg Furnishers</a></li>
-      </ul>
-      <!-- clothing list -->
-      <ul class="menu-list-drop children-drops">
-        <li class="arrow back-btn">
-          <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
-          </svg>Back
-        </li>
-        <li><a href="/ackermans/">Ackermans</a></li>
-        <li><a href="/cape-union-mart/">Cape Union Mart</a></li>
-        <li><a href="/foschini/">Foschini</a></li>
-        <li><a href="/jet/">Jet</a></li>
-        <li><a href="/mr-price/">Mr Price</a></li>
-        <li><a href="/mrp-sport/">MRP Sport</a></li>
-        <li><a href="/spitz/">Spitz</a></li>
-        <li><a href="/sportscene/">Sportscene</a></li>
-        <li><a href="/sportsmans-warehouse/">Sportsmans Warehouse</a></li>
-        <li><a href="/superbalist/">Superbalist</a></li>
-        <li><a href="/totalsports/">Totalsports</a></li>
-        <li><a href="/truworths/">Truworths</a></li>
-      </ul>
-      <!-- Health & Beauty list -->
-      <ul class="menu-list-drop children-drops">
-        <li class="arrow back-btn">
-          <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
-          </svg>Back
-        </li>
-        <li><a href="/avon/">Avon</a></li>
-        <li><a href="/clicks/">Clicks</a></li>
-        <li><a href="/dis-chem/">Dis-Chem</a></li>
-        <li><a href="/justine/">Justine</a></li>
-      </ul>
-      <!-- Vehicles list -->
-      <ul class="menu-list-drop children-drops">
-        <li class="arrow back-btn">
-          <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
-          </svg></span>Back
-        </li>
-        <li><a href="#">Car Magazines</a></li>
-      </ul>
-      <!-- Other list -->
-      <ul class="menu-list-drop children-drops">
-        <li class="arrow back-btn">
-          <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
-          </svg>Back
-        </li>
-        <li><a href="/aliexpress/">AliExpress</a></li>
-        <li><a href="/autozone/">AutoZone</a></li>
-        <li><a href="/babies-r-us/">Babies R Us</a></li>
-        <li><a href="/baby-boom/">Baby Boom</a></li>
-        <li><a href="/baby-city/">Baby City</a></li>
-        <li><a href="/crazy-store/">Crazy Store</a></li>
-        <li><a href="/edgars/">Edgars</a></li>
-        <li><a href="/pep-stores/">PEP Stores</a></li>
-        <li><a href="/toys-r-us/">Toys R Us</a></li>
-        <li><a href="/tupperware/">Tupperware</a></li>
-      </ul>
+      ?>
+
+
     </div>
   </nav>
 
