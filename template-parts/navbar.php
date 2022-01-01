@@ -21,6 +21,12 @@
     'taxonomy' => 'store_type',
     'hide_empty' => false
   ));
+
+  // Get All Taxonomies
+  $tax = get_terms(array(
+    'taxonomy' => 'store_type',
+    'hide_empty' => false
+  ));
   ?>
   <div class="cat-dropdown">
     <input id="cat_input" type="text" class="textBox" placeholder="<?php echo $term_name ?  $term_name : 'Catagories' ?>" readonly />
@@ -73,92 +79,35 @@
         <?php  }
         }
         ?>
-        <!-- <li class="menu-list">
-          <a href="#">
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-
-                <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
-              </svg>
-            </div>
-            Groceries <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-              <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
-            </svg>
-          </a>
-        </li>
-        <li class="menu-list">
-          <a href="#">
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-
-                <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
-              </svg>
-            </div>
-            Electronics <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-              <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
-            </svg>
-          </a>
-        </li>
-
-        <li class="menu-list">
-          <a href="#">
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-
-                <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
-              </svg>
-            </div>
-            Home & Garden <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-              <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
-            </svg>
-          </a>
-        </li>
-        <li class="menu-list">
-          <a href="#">
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-
-                <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
-              </svg>
-            </div>
-            Clothing <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-              <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
-            </svg>
-          </a>
-        </li>
-        <li class="menu-list">
-          <a href="#">
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-
-                <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
-              </svg>
-            </div>
-            Health & Beauty <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-              <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
-            </svg>
-          </a>
-        </li>
-        <li class="menu-list">
-          <a href="#">
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-
-                <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
-              </svg>
-            </div>
-            Vehicles <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-              <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
-            </svg>
-          </a>
-        </li>
-        <li class="menu-list">
-          <a href="#">
-            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-
-                <path d="M464 128H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48z" />
-              </svg>
-            </div>
-            Other <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-              <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
-            </svg>
-          </a>
-        </li> -->
       </ul>
+      <?php  // Posts by terms
+      $the_terms = [];
+      foreach ($tax as $t) {
+        array_push($the_terms, $t->term_id);
+      }
+
+      $all_posts = array(
+        'posts_per_page' => -1,
+        'post_type' => 'store',
+        'tax_query' => array(
+          'taxonomy' => 'store_type',
+          'field' => 'term_id',
+          'terms' => $the_terms
+        )
+      );
+
+      $query_term_posts = new WP_Query($all_posts);
+      while ($query_term_posts->have_posts()) {
+        $query_term_posts->the_post(); ?>
+        <ul class="menu-list-drop children-drops">
+          <li class="arrow back-btn">
+            <svg class="back-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z" />
+            </svg>Back
+          </li>
+          <li><a href="/bluff-meat-supply/"><?php echo the_title() ?></a></li>
+        </ul>
+      <?php    } ?>
       <!-- Groceries list -->
       <ul class="menu-list-drop children-drops">
         <li class="arrow back-btn">

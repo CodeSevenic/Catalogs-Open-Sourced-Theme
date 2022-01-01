@@ -67,7 +67,7 @@
        if (!catToggle) cat_dropdown.classList.remove('active')
      }
    });
-   // Main Categories action functions
+   // View Category
    menu_list.forEach((element, key) => {
      element.onclick = () => {
        menu_bar.style.display = 'none';
@@ -75,7 +75,7 @@
      };
    });
 
-   //  Back action functions
+   //  Back action 
    back_btn.forEach((element, key) => {
      element.onclick = () => {
        menu_list_drop[key].style.display = 'none';
