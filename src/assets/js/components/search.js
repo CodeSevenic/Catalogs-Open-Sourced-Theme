@@ -44,7 +44,7 @@ class Search {
       // this.search_button.classList.add('shown');
     } else {
       this.clear.classList.remove('shown');
-      this.search_button.classList.remove('shown');
+      // this.search_button.classList.remove('shown');
     }
   }
 
