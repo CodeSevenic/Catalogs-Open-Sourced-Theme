@@ -334,3 +334,15 @@ div#navbar {
 .home_icon svg:hover {
   fill: #7dd3fc;
 }
+
+/* Dynamic Search CSS styling */
+.search-results-wrapper {
+  position: absolute;
+  z-index: 500;
+  background: white;
+  border: 2px solid;
+  top: 50px;
+  right: 21px;
+  height: 300%;
+  width: 33%;
+}
