@@ -1,6 +1,7 @@
 class Search {
   // 1. describe and create / initiate our object
   constructor() {
+    this.resultsDiv = document.getElementById('search-content');
     this.search = document.querySelector('.custom_search');
     this.icon = document.querySelector('.icon');
     this.clear = document.querySelector('.clear');
@@ -11,6 +12,8 @@ class Search {
     this.events();
     this.onChangeValue();
     this.searchState();
+    this.isSpinnerVisible = false;
+    this.typingTimer;
   }
 
   // 2. events
@@ -42,10 +45,37 @@ class Search {
     if (this.search_input.value.length > 0 || this.search_input.value) {
       this.clear.classList.add('shown');
       // this.search_button.classList.add('shown');
+      this.typingLogic();
     } else {
       this.clear.classList.remove('shown');
       // this.search_button.classList.remove('shown');
+      this.isSpinnerVisible = true;
+      this.typingLogic();
     }
+  }
+
+  typingLogic() {
+    clearTimeout(this.typingTimer);
+    if (!this.isSpinnerVisible) {
+      this.resultsDiv.innerHTML = `<div class="catalogs-spinner"></div>`;
+      this.isSpinnerVisible = true;
+    }
+    this.typingTimer = setTimeout(this.getResults.bind(this), 2000);
+  }
+
+  getResults() {
+    if (this.search_input.value.length > 0 || this.search_input.value) {
+      console.log('HTML shown');
+      this.resultsDiv.innerHTML = `
+    <h3 class="text-xl font-semibold">Title</h3>
+    <ul class="search-results-list">
+      <li class="search-results-item">Results Will Be Here</li>
+    </ul>`;
+    } else {
+      console.log('HTML hidden');
+      this.resultsDiv.innerHTML = '';
+    }
+    this.isSpinnerVisible = false;
   }
 
   onInput() {

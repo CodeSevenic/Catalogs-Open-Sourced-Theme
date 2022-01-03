@@ -111,14 +111,16 @@
       <div class="container">
         <?php get_template_part('template-parts/navbar') ?>
       </div>
+
       <div class="search-results-wrapper">
-        <div class="search-results-container">
-          <h3 class="text-xl font-semibold">Title</h3>
+        <div class="search-results-container" id="search-content">
+          <!-- <h3 class="text-xl font-semibold">Title</h3>
           <ul class="search-results-list">
             <li class="search-results-item">Results Will Be Here</li>
-          </ul>
+          </ul> -->
         </div>
       </div>
+
     </div>
   </header>
   <!-- Header Ends Here -->
