@@ -73,34 +73,37 @@ $banner_query = new WP_Query($banner_args);
         }
       ?>
         <li class="li-brochu swiper-slide">
-          <article class="catalog ga-brochure-catalog">
-            <div class="catalog-cover">
-              <a class="catalog-anchor" href="<?php the_permalink(); ?>">
-                <div class="catalog-image">
-                  <div class="catalog-border">
-                    <img src="<?php if ($image) echo $image ?>" alt="Catalogue Game Johannesburg">
-                    <div class="catalog-mask"> <span class="button button-bold button-primary">View Catalog</span> </div>
+
+          <article class="cover">
+            <div class="catalog ga-brochure-catalog">
+              <div class="catalog-cover">
+                <a class="catalog-anchor" href="<?php the_permalink(); ?>">
+                  <div class="catalog-image">
+                    <div class="catalog-border">
+                      <img src="<?php if ($image) echo $image ?>" alt="Catalogue Game Johannesburg">
+                      <div class="catalog-mask"> <span class="button button-bold button-primary">View Catalog</span> </div>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </div>
-            <header class="catalog-header">
-              <span class="catalog-date">
-                <?php echo get_field('start_date') ?> - <?php echo get_field('end_date') ?> </span>
-              <?php if (get_field('cover_title')) { ?>
-                <h4 class="catalog-title"><?php echo get_field('cover_title') ?></h4>
-              <?php } ?>
-            </header>
-            <?php
-            if (get_field('store_logo')) { ?>
-              <div class="catalog-logo"> <a href="<?php the_permalink() ?>" class="city_slider-logo-link ">
-                  <img src="<?php echo get_field('store_logo')['sizes']['catalog-logo'] ?>" alt="">
-                </a> </div> <?php } else { ?>
-              <div class="catalog-website">
-                <a href="<?php the_permalink() ?>" target="_blank"><?php the_title() ?></a>
+                </a>
               </div>
-            <?php }
-            ?>
+              <header class="catalog-header">
+                <span class="catalog-date">
+                  <?php echo get_field('start_date') ?> - <?php echo get_field('end_date') ?> </span>
+                <?php if (get_field('cover_title')) { ?>
+                  <h4 class="catalog-title"><?php echo get_field('cover_title') ?></h4>
+                <?php } ?>
+              </header>
+              <?php
+              if (get_field('store_logo')) { ?>
+                <div class="catalog-logo"> <a href="<?php the_permalink() ?>" class="city_slider-logo-link ">
+                    <img src="<?php echo get_field('store_logo')['sizes']['catalog-logo'] ?>" alt="">
+                  </a> </div> <?php } else { ?>
+                <div class="catalog-website">
+                  <a href="<?php the_permalink() ?>" target="_blank"><?php the_title() ?></a>
+                </div>
+              <?php }
+              ?>
+            </div>
           </article>
         </li>
       <?php   }

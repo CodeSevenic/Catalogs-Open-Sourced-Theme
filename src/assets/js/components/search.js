@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 class Search {
   // 1. describe and create / initiate our object
   constructor() {
@@ -63,9 +65,16 @@ class Search {
     this.typingTimer = setTimeout(this.getResults.bind(this), 2000);
   }
 
-  getResults() {
+  async getResults() {
     if (this.search_input.value.length > 0 || this.search_input.value) {
-      console.log('HTML shown');
+      try {
+        const results = await axios.get(
+          'http://witbankcatalogs20.local/wp-json/wp/v2/posts?search=shoprite'
+        );
+        console.log(results.data);
+      } catch (error) {
+        console.log(error);
+      }
 
       this.resultsDiv.innerHTML = /*html*/ `
         <h3 class="text-xl font-semibold">Title</h3>

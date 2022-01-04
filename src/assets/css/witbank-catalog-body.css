@@ -313,13 +313,18 @@ span.clear.shown {
 }
 
 .catalog {
-  background-color: #fff;
   border-radius: 5px;
   text-align: center;
   -webkit-box-shadow: 0 3px 15px 5px rgba(153, 153, 153, 0.5);
   box-shadow: 0 3px 15px 5px rgba(153, 153, 153, 0.5);
-  max-width: 240px;
+}
+
+article.cover {
+  background-color: #fff;
+  box-shadow: inset 0px 0px 15px -5px #075985;
   margin: 0 auto;
+  max-width: 240px;
+  border-radius: 5px;
 }
 
 .catalog-logo {
