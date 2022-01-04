@@ -69,7 +69,7 @@ class Search {
     if (this.search_input.value.length > 0 || this.search_input.value) {
       try {
         const results = await axios.get(
-          'http://witbankcatalogs20.local/wp-json/wp/v2/posts?search=shoprite'
+          'http://witbankcatalogs20.local/wp-json/wp/v2/store?search=shoprite'
         );
         console.log(results.data);
       } catch (error) {
