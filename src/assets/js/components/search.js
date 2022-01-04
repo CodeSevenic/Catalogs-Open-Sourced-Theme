@@ -66,11 +66,12 @@ class Search {
   getResults() {
     if (this.search_input.value.length > 0 || this.search_input.value) {
       console.log('HTML shown');
-      this.resultsDiv.innerHTML = `
-    <h3 class="text-xl font-semibold">Title</h3>
-    <ul class="search-results-list">
-      <li class="search-results-item">Results Will Be Here</li>
-    </ul>`;
+
+      this.resultsDiv.innerHTML = /*html*/ `
+        <h3 class="text-xl font-semibold">Title</h3>
+         <ul class="search-results-list">
+             <li class="search-results-item">Results Will Be Here</li>
+        </ul>`;
     } else {
       console.log('HTML hidden');
       this.resultsDiv.innerHTML = '';
