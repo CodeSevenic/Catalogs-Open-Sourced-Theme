@@ -22,7 +22,7 @@ class Search {
   events() {
     this.icon.addEventListener('click', this.iconClick.bind(this));
     this.search_input.addEventListener('input', this.onInput.bind(this));
-    // this.clear.addEventListener('click', this.onClear.bind(this));
+    this.clear.addEventListener('click', this.onClear.bind(this));
   }
 
   // 3. methods
