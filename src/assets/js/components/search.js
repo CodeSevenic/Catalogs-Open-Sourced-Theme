@@ -34,6 +34,7 @@ class Search {
     } else {
       sessionStorage.clear();
     }
+    this.search_input.value = '';
   }
 
   searchState() {
@@ -68,10 +69,17 @@ class Search {
   async getResults() {
     if (this.search_input.value.length > 0 || this.search_input.value) {
       try {
-        const res = await axios.get(
+        const store = await axios.get(
           catalogsData.root_url +
             `/wp-json/wp/v2/store?search=${this.search_input.value}`
         );
+        const taxonomy = await axios.get(
+          catalogsData.root_url +
+            `/wp-json/wp/v2/store_type?search=${this.search_input.value}`
+        );
+        const store_data = store.data;
+        const tax_data = taxonomy.data;
+        let res = store_data.concat(tax_data);
         const results = res.data;
         console.log(results);
         this.resultsDiv.innerHTML = results.length
