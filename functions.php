@@ -1,5 +1,5 @@
 <?php
-
+require_once 'lib/catalogs-custom-rest.php';
 require_once 'lib/customize.php';
 require_once 'lib/helpers.php';
 require_once 'lib/enqueue-assets.php';

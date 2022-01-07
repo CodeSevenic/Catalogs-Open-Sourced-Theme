@@ -79,8 +79,8 @@ class Search {
         );
         const store_data = store.data;
         const tax_data = taxonomy.data;
-        let res = store_data.concat(tax_data);
-        const results = res.data;
+        let results = store_data.concat(tax_data);
+
         console.log(results);
         this.resultsDiv.innerHTML = results.length
           ? `
@@ -89,14 +89,17 @@ class Search {
            ${results
              .map(
                (el) =>
-                 `<li class="search-results-item"><a href="${el.link}">${el.title.rendered}</a></li>`
+                 `<li class="search-results-item"><a href="${el.link}">${
+                   el.title?.rendered ? el.title.rendered : el.name || ''
+                 }</a></li>`
              )
              .join('')}
                
           </ul>`
           : `<p>No matching results</p>`;
       } catch (error) {
-        console.log(error);
+        this.resultsDiv.innerHTML =
+          '<p class="text-red-500">Unexpected error</p>';
       }
     } else {
       console.log('HTML hidden');
