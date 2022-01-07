@@ -23,6 +23,10 @@ function catalogs_assets()
   if (is_singular() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
   }
+
+  wp_localize_script('catalogs-scripts', 'catalogsData', array(
+    'root_url' => get_site_url()
+  ));
 }
 
 add_action('enqueue_block_editor_assets', 'catalogs_block_editor_assets');

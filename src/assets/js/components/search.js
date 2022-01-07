@@ -73,8 +73,9 @@ class Search {
         );
         const results = res.data;
         console.log(results);
-        this.resultsDiv.innerHTML = `
-          <h3 class="text-xl font-semibold">${el.title.rendered}</h3>
+        this.resultsDiv.innerHTML = results.length
+          ? `
+          <h3 class="text-xl font-semibold">Brands | Retailers</h3>
            <ul class="search-results-list">
            ${results
              .map(
@@ -83,7 +84,8 @@ class Search {
              )
              .join('')}
                
-          </ul>`;
+          </ul>`
+          : `<p>No matching results</p>`;
       } catch (error) {
         console.log(error);
       }
