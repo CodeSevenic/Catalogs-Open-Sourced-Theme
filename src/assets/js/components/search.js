@@ -62,14 +62,15 @@ class Search {
       this.resultsDiv.innerHTML = `<div class="catalogs-spinner"></div>`;
       this.isSpinnerVisible = true;
     }
-    this.typingTimer = setTimeout(this.getResults.bind(this), 2000);
+    this.typingTimer = setTimeout(this.getResults.bind(this), 750);
   }
 
   async getResults() {
     if (this.search_input.value.length > 0 || this.search_input.value) {
       try {
         const res = await axios.get(
-          `http://witbankcatalogs20.local/wp-json/wp/v2/store?search=${this.search_input.value}`
+          catalogsData.root_url +
+            `/wp-json/wp/v2/store?search=${this.search_input.value}`
         );
         const results = res.data;
         console.log(results);
