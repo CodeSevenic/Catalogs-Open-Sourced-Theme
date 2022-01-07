@@ -68,19 +68,25 @@ class Search {
   async getResults() {
     if (this.search_input.value.length > 0 || this.search_input.value) {
       try {
-        const results = await axios.get(
-          'http://witbankcatalogs20.local/wp-json/wp/v2/store?search=shoprite'
+        const res = await axios.get(
+          `http://witbankcatalogs20.local/wp-json/wp/v2/store?search=${this.search_input.value}`
         );
-        console.log(results.data);
+        const results = res.data;
+        console.log(results);
+        this.resultsDiv.innerHTML = `
+          <h3 class="text-xl font-semibold">${el.title.rendered}</h3>
+           <ul class="search-results-list">
+           ${results
+             .map(
+               (el) =>
+                 `<li class="search-results-item"><a href="${el.link}">${el.title.rendered}</a></li>`
+             )
+             .join('')}
+               
+          </ul>`;
       } catch (error) {
         console.log(error);
       }
-
-      this.resultsDiv.innerHTML = /*html*/ `
-        <h3 class="text-xl font-semibold">Title</h3>
-         <ul class="search-results-list">
-             <li class="search-results-item">Results Will Be Here</li>
-        </ul>`;
     } else {
       console.log('HTML hidden');
       this.resultsDiv.innerHTML = '';

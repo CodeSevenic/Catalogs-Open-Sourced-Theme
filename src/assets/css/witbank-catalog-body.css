@@ -358,9 +358,9 @@ a.city_slider-logo-link {
 
 .main-catalogs {
   position: relative;
-  margin: 20px 0 40px 0;
+  margin: 20px auto 40px auto;
   overflow-x: clip;
-  padding: 0 3%;
+  width: 90%;
 }
 
 .main-pagination {
