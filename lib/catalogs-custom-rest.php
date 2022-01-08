@@ -40,7 +40,7 @@ function catalogsSearchResults($data)
 
     $catalog_content = get_field('catalog_content');
     foreach ($catalog_content as $content) {
-      array_push($results['catalogs'], $content['catalog_title']);
+      // array_push($results['catalogs'], $content['catalog_title']);
     }
   }
   wp_reset_postdata();
