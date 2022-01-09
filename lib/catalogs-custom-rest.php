@@ -59,7 +59,7 @@ function catalogsSearchResults($data)
   $terms = get_terms($args);
 
   foreach ($terms as $tax) {
-    array_push($results['categories'], array('category_name' => $tax->name, 'category_link' => get_term_link($tax->term_id, 'store_type')));
+    // array_push($results['categories'], array('category_name' => $tax->name, 'category_link' => get_term_link($tax->term_id, 'store_type')));
   }
 
 
