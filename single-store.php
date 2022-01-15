@@ -49,7 +49,7 @@ $catalog_content = get_field('catalog_content', get_the_ID());
                         <div class="catalog-border">
                           <img src="<?php echo $catalog_image['catalog_image']['url']; ?>" alt="">
 
-                          <!-- <div class="catalog-mask"> <span class="button button-bold button-primary">View Catalog</span> </div> -->
+                          <div class="catalog-mask"> <span class="button button-bold button-primary">View Catalog</span> </div>
                         </div>
                       </div>
                     </a>
