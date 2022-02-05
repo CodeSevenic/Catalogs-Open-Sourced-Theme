@@ -28,7 +28,7 @@ $catalog_content = get_field('catalog_content', get_the_ID());
   <h1 class="font-semibold text-xl lg:text-2xl my-4 px-[5%] text-center md:text-left">View all featured <span class="text-sky-700">specials</span>, <span class="text-sky-600">deals</span>, <span class="text-sky-500">magazines</span> and <span class="text-sky-800">catalogues</span> from <img class="inline w-[100px]" src="<?php echo get_field('store_logo')['sizes']['catalog-logo'] ?>" alt="<?php the_title() ?>">
   </h1>
 
-  <!-- <hr class="py-3  border-sky-500 mx-auto w-[80%] md:w-[95%]"> -->
+  <hr class="py-3  border-sky-500 mx-auto w-[80%] md:w-[95%]">
 
   <div class="catalogs-frame relative">
     <div class="swiper-button-prev"></div>
