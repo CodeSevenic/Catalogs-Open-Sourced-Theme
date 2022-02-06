@@ -16,7 +16,7 @@ $catalog_content = get_field('catalog_content', get_the_ID());
         if ($banners) : ?>
           <?php foreach ($banners as $banner) { ?>
             <a class="swiper-slide" href="">
-              <img src="<?php echo $banner['url'] ?>" alt="">
+              <!-- <img src="<?php echo $banner['url'] ?>" alt=""> -->
             </a>
           <?php }; ?>
         <?php endif;
